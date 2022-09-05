@@ -19,7 +19,7 @@ class SplashScreenActivity : AppCompatActivity() {
         topTextView.startAnimation(animation)
 
         val splashScreenTimeOut = 4000
-        val homeIntent = Intent(this@SplashScreenActivity, MainActivity::class.java)
+        val homeIntent = Intent(this@SplashScreenActivity, LoginActivity::class.java)
 
         Handler(Looper.getMainLooper()).postDelayed({
           startActivity(homeIntent)
