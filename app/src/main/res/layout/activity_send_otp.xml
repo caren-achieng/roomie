@@ -38,7 +38,9 @@
                 android:gravity="center"
                 android:text="KE +254"
                 android:textColor="@color/black"
-                android:textSize="25sp" />
+                android:textSize="25sp"
+                android:layout_marginRight="30dp"
+                />
 
             <EditText
                 android:id="@+id/inputMobile"
