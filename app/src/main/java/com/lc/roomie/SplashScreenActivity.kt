@@ -1,7 +1,7 @@
 package com.lc.roomie
 
-import android.app.Activity
 import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -16,14 +16,15 @@ class SplashScreenActivity : Activity() {
 
         val animation = AnimationUtils.loadAnimation( this, R.anim.logoanimation)
 
-        logo.startAnimation(animation)
+        topTextView.startAnimation(animation)
 
-        val splashScreenTimeout=4000
-        val homeIntent = Intent(this@SplashScreenActivity, MainActivity::class.java)
+        val splashScreenTimeOut = 4000
+        val homeIntent = Intent(this@SplashScreenActivity, LoginActivity::class.java)
 
         Handler(Looper.getMainLooper()).postDelayed({
-            startActivity(homeIntent)
+          startActivity(homeIntent)
             finish()
-        }, splashScreenTimeout.toLong())
+
+        }, splashScreenTimeOut.toLong())
     }
 }
