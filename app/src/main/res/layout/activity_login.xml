@@ -36,9 +36,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="40dp"
-            android:background="@drawable/button_background"
+            android:background="@drawable/button_change"
             android:text="CREATE ACCOUNT"
-            android:textColor="@color/black"
+            android:textColor="@drawable/button_textcolor_change"
             android:textSize="21sp" />
 
         <Button
@@ -46,9 +46,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
-            android:background="@drawable/border_button"
+            android:background="@drawable/button_change"
             android:text="SIGN IN"
-            android:textColor="@color/white"
+            android:textColor="@drawable/button_textcolor_change"
             android:textSize="21sp" />
 
         <TextView

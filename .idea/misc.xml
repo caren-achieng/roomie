@@ -6,6 +6,8 @@
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/Roomie/app/src/main/res/layout/activity_main.xml" value="0.3729166666666667" />
         <entry key="app/src/main/res/drawable/border_button.xml" value="0.1505" />
         <entry key="app/src/main/res/drawable/button_background.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/button_textcolor_change.xml" value="0.2335" />
+        <entry key="app/src/main/res/drawable/register_button_change.xml" value="0.251" />
         <entry key="app/src/main/res/font/museomoderno_bold.xml" value="0.38645833333333335" />
         <entry key="app/src/main/res/font/museomorderno_bold.xml" value="0.16666666666666666" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.33" />
