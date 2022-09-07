@@ -39,34 +39,35 @@
                 android:text="KE +254"
                 android:textColor="@color/black"
                 android:textSize="25sp"
-                android:layout_marginRight="30dp"
                 />
 
             <EditText
                 android:id="@+id/inputMobile"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
+                android:layout_marginLeft="25dp"
                 android:background="@color/transparent"
-                android:hint="765438972"
+                android:hint="712345678"
                 android:imeOptions="actionDone"
                 android:importantForAutofill="no"
                 android:inputType="number"
                 android:textColor="@color/black"
                 android:textSize="25sp"
-                android:textStyle="bold"/>
-
+                android:textStyle="bold"
+                />
         </LinearLayout>
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:layout_marginStart="40sp"
-                android:layout_marginTop="0dp"
-                android:layout_marginEnd="270sp"
-                android:background="@color/light_grey"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginStart="40sp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="270sp"
+            android:background="@color/light_grey" />
 
+        <!-- Changed width to 130dp so it fits a kenyan number perfectly, match_parent too big-->
             <View
-                android:layout_width="match_parent"
+                android:layout_width="130dp"
                 android:layout_height="2dp"
                 android:layout_marginStart="160sp"
                 android:layout_marginTop="-2.4dp"
