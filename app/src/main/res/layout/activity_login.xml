@@ -19,17 +19,20 @@
             android:layout_height="150dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="150dp"
-            android:src="@drawable/roomie_white" />
+            android:src="@drawable/roomie_white"
+        />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
             android:padding="5dp"
-            android:text="By tapping &quot;Create account&quot; or&quot; Sign in&quot;, you agree to our Terms. Learn how we process your data in our Privacy Policy and Cookies Policy."
+            android:text="@string/privacy_policy"
             android:textAlignment="center"
-            android:textColor="@color/white" />
+            android:textColor="@color/white"
+        />
 
         <Button
             android:layout_width="300dp"
@@ -39,7 +42,8 @@
             android:background="@drawable/button_change"
             android:text="CREATE ACCOUNT"
             android:textColor="@drawable/button_textcolor_change"
-            android:textSize="21sp" />
+            android:textSize="21sp"
+        />
 
         <Button
             android:layout_width="300dp"
@@ -49,17 +53,18 @@
             android:background="@drawable/button_change"
             android:text="SIGN IN"
             android:textColor="@drawable/button_textcolor_change"
-            android:textSize="21sp" />
+            android:textSize="21sp"
+        />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="20dp"
-            android:text="Trouble signing in?"
+            android:text="@string/trouble_signing_in"
             android:textAlignment="center"
+            android:textColor="@color/white"
             android:textStyle="bold"
-            android:textColor="@color/white"/>
-
+        />
 
     </LinearLayout>
 

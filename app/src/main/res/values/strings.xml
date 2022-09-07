@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">roomie.</string>
+    <string name="create_account">CREATE ACCOUNT</string>
+    <string name="sign_in">SIGN IN</string>
+    <string name="privacy_policy">By tapping \"Create account\" or\" Sign in\", you agree to our Terms. Learn how we process your data in our Privacy Policy and Cookies Policy.</string>
+    <string name="trouble_signing_in">Trouble signing in?</string>
 </resources>
