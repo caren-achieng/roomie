@@ -11,7 +11,7 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_login)
 
         CreateAccountBtn.setOnClickListener{
-            val intent = Intent(this, EnterPhoneNumberActivity::class.java)
+            val intent = Intent(this, SendOTPActivity::class.java)
             startActivity(intent)
         }
     }
