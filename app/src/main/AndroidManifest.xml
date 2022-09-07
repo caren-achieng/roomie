@@ -17,7 +17,7 @@
             android:name=".LoginActivity"
             android:exported="true"
             android:label="LoginPage"
-            android:theme="@style/Theme.Login"/>
+            android:theme="@style/Theme.Transparent"/>
 
         <activity
             android:name=".SplashScreenActivity"
@@ -32,7 +32,7 @@
         <activity
             android:name=".MainActivity"
             android:label="SplashScreen"
-            android:theme="@style/Theme.Roomie"></activity>
+            android:theme="@style/Theme.Roomie" />
     </application>
 
 </manifest>

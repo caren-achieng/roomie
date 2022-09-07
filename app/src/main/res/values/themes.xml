@@ -28,4 +28,7 @@
     <style name="Theme.Login" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowFullscreen">true</item>
     </style>
+    <style name="AppTheme" parent="android:Theme.Material.Light.DarkActionBar">
+        <item name="android:colorControlHighlight">@color/my_green</item>
+    </style>
 </resources>

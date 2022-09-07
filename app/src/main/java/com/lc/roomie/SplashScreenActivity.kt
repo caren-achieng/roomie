@@ -8,7 +8,7 @@ import android.os.Looper
 import android.view.animation.AnimationUtils
 import kotlinx.android.synthetic.main.activity_splash_screen.*
 
-class SplashScreenActivity : Activity() {
+class SplashScreenActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)
@@ -16,7 +16,7 @@ class SplashScreenActivity : Activity() {
 
         val animation = AnimationUtils.loadAnimation( this, R.anim.logoanimation)
 
-        topTextView.startAnimation(animation)
+        logo.startAnimation(animation)
 
         val splashScreenTimeOut = 4000
         val homeIntent = Intent(this@SplashScreenActivity, LoginActivity::class.java)
