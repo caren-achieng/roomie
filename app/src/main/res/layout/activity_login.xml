@@ -35,6 +35,7 @@
         />
 
         <Button
+            android:id="@+id/CreateAccountBtn"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
