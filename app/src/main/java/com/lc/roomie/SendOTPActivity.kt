@@ -19,7 +19,6 @@ import kotlinx.android.synthetic.main.activity_verify_otp.*
 class SendOTPActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        WindowCompat.setDecorFitsSystemWindows(window, false)
         setContentView(R.layout.activity_send_otp)
 
         SendOtp.setOnClickListener{
