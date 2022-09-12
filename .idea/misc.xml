@@ -32,6 +32,7 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_send_otp.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_verify_email.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_verify_otp.xml" value="0.1" />
       </map>
     </option>
