@@ -1,29 +1,22 @@
 package com.lc.roomie
 
+
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.app.Activity
-import android.content.Intent
 import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ProgressBar
 import android.widget.Toast
-import com.google.firebase.FirebaseException
-import com.google.firebase.FirebaseTooManyRequestsException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
-import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.PhoneAuthCredential
-import com.google.firebase.auth.PhoneAuthOptions
 import com.google.firebase.auth.PhoneAuthProvider
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
-import kotlinx.android.synthetic.main.activity_send_otp.*
 import kotlinx.android.synthetic.main.activity_verify_otp.*
-import kotlinx.android.synthetic.main.activity_verify_otp.view.*
-import java.util.concurrent.TimeUnit
+
 
 class VerifyOTPActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
