@@ -80,13 +80,13 @@ class VerifyOTPActivity : AppCompatActivity() {
                     // Sign in success, update UI with the signed-in user's information
                     //intent to change page
                     val phone = auth.currentUser?.phoneNumber
-                    Log.d(PhoneAuthActivity.TAG, "signInWithCredential:success")
+                    Log.d(TAG, "signInWithCredential:success")
                     Toast.makeText(this, "Login Successful $phone", Toast.LENGTH_SHORT).show()
 
                     val user = task.result?.user
                 } else {
                     // Sign in failed, display a message and update the UI
-                    Log.w(PhoneAuthActivity.TAG, "signInWithCredential:failure", task.exception)
+                    Log.w(TAG, "signInWithCredential:failure", task.exception)
                     progressBar2.visibility = View.GONE
                     buttonVerify.visibility = View.VISIBLE
                     if (task.exception is FirebaseAuthInvalidCredentialsException) {
@@ -98,5 +98,8 @@ class VerifyOTPActivity : AppCompatActivity() {
                     // Update UI
                 }
             }
+    }
+    companion object {
+        private const val TAG = "SendOTPActivity"
     }
 }

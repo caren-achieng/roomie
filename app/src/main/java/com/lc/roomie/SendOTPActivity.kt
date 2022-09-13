@@ -78,14 +78,14 @@ class SendOTPActivity : AppCompatActivity() {
                 // 2 - Auto-retrieval. On some devices Google Play services can automatically
                 //     detect the incoming verification SMS and perform verification without
                 //     user action.
-                Log.d(PhoneAuthActivity.TAG, "onVerificationCompleted:$credential")
+                Log.d(TAG, "onVerificationCompleted:$credential")
                 signInWithPhoneAuthCredential(credential)
             }
 
             override fun onVerificationFailed(e: FirebaseException) {
                 // This callback is invoked in an invalid request for verification is made,
                 // for instance if the the phone number format is not valid.
-                Log.w(PhoneAuthActivity.TAG, "onVerificationFailed", e)
+                Log.w(TAG, "onVerificationFailed", e)
 
                 if (e is FirebaseAuthInvalidCredentialsException) {
                     // Invalid request
@@ -95,7 +95,7 @@ class SendOTPActivity : AppCompatActivity() {
 
                 } else if (e is FirebaseTooManyRequestsException) {
                     // The SMS quota for the project has been exceeded
-                    Log.d(PhoneAuthActivity.TAG, "SMS quota for the project has been exceeded ${e.message}")
+                    Log.d(TAG, "SMS quota for the project has been exceeded ${e.message}")
                     progressBar.visibility = View.GONE
                     SendOtp.visibility = View.VISIBLE
                 }
@@ -110,7 +110,7 @@ class SendOTPActivity : AppCompatActivity() {
                 // The SMS verification code has been sent to the provided phone number, we
                 // now need to ask the user to enter the code and then construct a credential
                 // by combining the code with a verification ID.
-                Log.d(PhoneAuthActivity.TAG, "onCodeSent:$verificationId")
+                Log.d(TAG, "onCodeSent:$verificationId")
 
                 // Save verification ID and resending token so we can use them later
                 storedVerificationId = verificationId
@@ -175,13 +175,13 @@ class SendOTPActivity : AppCompatActivity() {
                     // Sign in success, update UI with the signed-in user's information
                     //intent to change page
                     val phone = auth.currentUser?.phoneNumber
-                    Log.d(PhoneAuthActivity.TAG, "signInWithCredential:success")
+                    Log.d(TAG, "signInWithCredential:success")
                     Toast.makeText(this, "Login Successful $phone", Toast.LENGTH_SHORT).show()
 
                     val user = task.result?.user
                 } else {
                     // Sign in failed, display a message and update the UI
-                    Log.w(PhoneAuthActivity.TAG, "signInWithCredential:failure", task.exception)
+                    Log.w(TAG, "signInWithCredential:failure", task.exception)
                     if (task.exception is FirebaseAuthInvalidCredentialsException) {
                         // The verification code entered was invalid
                         Toast.makeText(this, "Invalid Verification Code", Toast.LENGTH_SHORT).show()
