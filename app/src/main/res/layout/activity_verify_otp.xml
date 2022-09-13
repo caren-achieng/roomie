@@ -17,8 +17,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="60dp"
-            android:layout_marginLeft="40dp"
-            android:text="Verification code"
+            android:layout_marginStart="40dp"
+            android:text="@string/verification_code"
             android:textColor="@color/black"
             android:textSize="35sp"
             android:textStyle="bold"/>
@@ -26,8 +26,8 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="40dp"
-                android:text="Enter verification code sent to"
+                android:layout_marginStart="40dp"
+                android:text="@string/enter_verification_code_sent_to"
                 android:textColor="@color/dark_grey"
                 android:textSize="16sp" />
 
@@ -152,7 +152,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Didn't receive the code?"
+                android:text="@string/did_not_receive_code"
                 android:textColor="@color/light_grey"
                 android:textSize="14sp"
                 />
@@ -162,7 +162,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="Resend Code"
+                android:text="@string/resend_code"
                 android:textColor="@color/my_green"
                 android:textSize="15sp"
                 android:textStyle="bold"
@@ -180,7 +180,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="40dp"
                 android:background="@drawable/button_enabled_change"
-                android:text="CONTINUE"
+                android:text="@string/continue_txt"
                 android:textColor="@drawable/button_textcolor_enable"
                 android:textSize="21sp"
                 />

@@ -18,8 +18,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="60dp"
-            android:layout_marginLeft="40dp"
-            android:text="What's your email?"
+            android:layout_marginStart="40dp"
+            android:text="@string/what_is_your_email"
             android:textColor="@color/black"
             android:textSize="33sp"
             android:textStyle="bold"/>
@@ -27,19 +27,19 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="left"
+            android:gravity="start"
             android:padding="50dp"
-            android:text="Don't lose access to your account, verify your email."
+            android:text="@string/don_t_lose_access_to_your_account_verify_your_email"
             android:textColor="@color/dark_grey"
             android:textSize="16sp"
             android:layout_marginTop="-40dp"
-            android:layout_marginLeft="-5dp"
+            android:layout_marginStart="-5dp"
             />
 
         <LinearLayout
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:layout_marginLeft="40dp"
+            android:layout_marginStart="40dp"
             android:orientation="horizontal">
 
 
@@ -47,10 +47,10 @@
                 android:id="@+id/inputMobile"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
-                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
                 android:layout_marginTop="-10dp"
                 android:background="@color/transparent"
-                android:hint="Enter email"
+                android:hint="@string/enter_email"
                 android:imeOptions="actionDone"
                 android:importantForAutofill="no"
                 android:inputType="textEmailAddress"
@@ -72,7 +72,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="150dp"
             android:background="@drawable/button_enabled_change"
-            android:text="CONTINUE"
+            android:text="@string/continue_txt"
             android:textColor="@drawable/button_textcolor_enable"
             android:textSize="21sp"
             />
