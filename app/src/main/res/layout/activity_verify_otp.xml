@@ -165,17 +165,30 @@
 
         </LinearLayout>
 
-        <Button
-            android:id="@+id/buttonVefiry"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="40dp"
-            android:background="@drawable/button_enabled_change"
-            android:text="CONTINUE"
-            android:textColor="@drawable/button_textcolor_enable"
-            android:textSize="21sp"
-            />
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/buttonVerify"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/button_enabled_change"
+                android:text="CONTINUE"
+                android:textColor="@drawable/button_textcolor_enable"
+                android:textSize="21sp"
+                />
+
+            <ProgressBar
+                android:id="@+id/progressBar2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                />
+        </FrameLayout>
 
 
 

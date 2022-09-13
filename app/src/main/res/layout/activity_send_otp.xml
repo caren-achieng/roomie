@@ -54,6 +54,7 @@
                 android:textColor="@color/black"
                 android:textSize="25sp"
                 android:textStyle="bold"
+                android:maxLength="9"
                 />
         </LinearLayout>
 
@@ -83,18 +84,30 @@
             android:textColor="@color/dark_grey"
             android:textSize="16sp"
             android:layout_marginTop="30dp"/>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/SendOtp"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/button_enabled_change"
+                android:text="@string/continue_txt"
+                android:textColor="@color/white"
+                android:textSize="21sp"
+                />
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_marginTop="20dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                />
+        </FrameLayout>
 
-        <Button
-            android:id="@+id/SendOtp"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="40dp"
-            android:background="@drawable/button_enabled_change"
-            android:text="CONTINUE"
-            android:textColor="@drawable/button_textcolor_enable"
-            android:textSize="21sp"
-            />
 
     </LinearLayout>
 </ScrollView>
