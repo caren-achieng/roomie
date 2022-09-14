@@ -118,6 +118,7 @@ class SendOTPActivity : AppCompatActivity() {
                 Toast.makeText(this@SendOTPActivity, "Verification Code Sent", Toast.LENGTH_SHORT).show()
                 val intent = Intent(this@SendOTPActivity, VerifyOTPActivity::class.java)
                 intent.putExtra("storedVerificationId", storedVerificationId)
+                intent.putExtra("storedResendToken", resendToken)
                 intent.putExtra("phoneNumber", phoneNumber.text.toString())
                 startActivity(intent)
             }
@@ -153,20 +154,6 @@ class SendOTPActivity : AppCompatActivity() {
         // [END start_phone_auth]
     }
 
-    private fun resendVerificationCode(
-        phoneNumber: String,
-        token: PhoneAuthProvider.ForceResendingToken?
-    ) {
-        val optionsBuilder = PhoneAuthOptions.newBuilder(auth)
-            .setPhoneNumber(phoneNumber)       // Phone number to verify
-            .setTimeout(60L, TimeUnit.SECONDS) // Timeout and unit
-            .setActivity(this)                 // Activity (for callback binding)
-            .setCallbacks(callbacks)          // OnVerificationStateChangedCallbacks
-        if (token != null) {
-            optionsBuilder.setForceResendingToken(token) // callback's ForceResendingToken
-        }
-        PhoneAuthProvider.verifyPhoneNumber(optionsBuilder.build())
-    }
 
     private fun signInWithPhoneAuthCredential(credential: PhoneAuthCredential) {
         auth.signInWithCredential(credential)
@@ -191,6 +178,6 @@ class SendOTPActivity : AppCompatActivity() {
             }
     }
     companion object {
-      private const val TAG = "SendOTPActivity"
+      const val TAG = "SendOTPActivity"
     }
 }

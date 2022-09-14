@@ -92,15 +92,16 @@
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
+                android:layout_marginBottom="20dp"
                 android:layout_gravity="center_horizontal"
-                android:background="@drawable/button_enabled_change"
+                android:background="@drawable/disabled_button_background"
                 android:text="@string/continue_txt"
                 android:textColor="@color/white"
                 android:textSize="21sp"
                 />
             <ProgressBar
                 android:id="@+id/progressBar"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_gravity="center"
