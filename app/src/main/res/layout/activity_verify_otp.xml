@@ -56,13 +56,15 @@
                 android:layout_height="45dp"
                 android:gravity="center"
                 android:imeOptions="actionNext"
-                android:importantForAutofill="no"
+                android:importantForAutofill="yes"
                 android:inputType="number"
                 android:maxLength="1"
                 android:textColor="@color/light_grey"
                 android:textStyle="bold"
                 android:textSize="24sp"
                 tools:ignore="LabelFor"
+                android:autofillHints="CloudOTP"
+
                 />
             <EditText
                 android:id="@+id/inputCode2"
@@ -71,13 +73,14 @@
                 android:layout_marginStart="4dp"
                 android:gravity="center"
                 android:imeOptions="actionNext"
-                android:importantForAutofill="no"
+                android:importantForAutofill="yes"
                 android:inputType="number"
                 android:maxLength="1"
                 android:textColor="@color/light_grey"
                 android:textStyle="bold"
                 android:textSize="24sp"
                 tools:ignore="LabelFor"
+                android:autofillHints="CloudOTP"
                 />
             <EditText
             android:id="@+id/inputCode3"
@@ -86,13 +89,14 @@
             android:layout_marginStart="4dp"
             android:gravity="center"
             android:imeOptions="actionNext"
-            android:importantForAutofill="no"
+            android:importantForAutofill="yes"
             android:inputType="number"
             android:maxLength="1"
             android:textColor="@color/light_grey"
             android:textStyle="bold"
             android:textSize="24sp"
             tools:ignore="LabelFor"
+            android:autofillHints="CloudOTP"
             />
             <EditText
             android:id="@+id/inputCode4"
@@ -101,13 +105,14 @@
             android:layout_marginStart="4dp"
             android:gravity="center"
             android:imeOptions="actionNext"
-            android:importantForAutofill="no"
+            android:importantForAutofill="yes"
             android:inputType="number"
             android:maxLength="1"
             android:textColor="@color/light_grey"
             android:textStyle="bold"
             android:textSize="24sp"
             tools:ignore="LabelFor"
+            android:autofillHints="CloudOTP"
             />
             <EditText
             android:id="@+id/inputCode5"
@@ -116,13 +121,14 @@
             android:layout_marginStart="4dp"
             android:gravity="center"
             android:imeOptions="actionNext"
-            android:importantForAutofill="no"
+            android:importantForAutofill="yes"
             android:inputType="number"
             android:maxLength="1"
             android:textColor="@color/light_grey"
             android:textStyle="bold"
             android:textSize="24sp"
             tools:ignore="LabelFor"
+            android:autofillHints="CloudOTP"
             />
             <EditText
             android:id="@+id/inputCode6"
@@ -131,12 +137,13 @@
             android:layout_marginStart="4dp"
             android:gravity="center"
             android:imeOptions="actionDone"
-            android:importantForAutofill="no"
+            android:importantForAutofill="yes"
             android:inputType="number"
             android:maxLength="1"
             android:textColor="@color/light_grey"
             android:textStyle="bold"
             android:textSize="24sp"
+            android:autofillHints="CloudOTP"
             tools:ignore="LabelFor"
             />
 
