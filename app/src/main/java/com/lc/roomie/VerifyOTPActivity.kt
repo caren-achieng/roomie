@@ -106,166 +106,6 @@ class VerifyOTPActivity : AppCompatActivity() {
         val storedVerificationId = intent.getStringExtra("storedVerificationId")
         VerifyButton.isEnabled = false
 
-//        inputCode1.addTextChangedListener(object: TextWatcher {
-//            override fun afterTextChanged(s: Editable?) {
-//                if (s.toString().length == 1) {
-//                    inputCode2.requestFocus()
-//                }
-//                else if(s.toString().length == 0) {
-//                    return
-//                }
-//            }
-//
-//            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-//
-//            }
-//
-//            @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
-//            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-//                val code = inputCode1.text.toString() + inputCode2.text.toString() + inputCode3.text.toString() + inputCode4.text.toString() + inputCode5.text.toString() + inputCode6.text.toString()
-//                if (code.length == 6) {
-//                    VerifyButton.isEnabled = true
-//                    VerifyButton.background = getDrawable(R.drawable.enabled_button_background)
-//                    return
-//                }else{
-//                    VerifyButton.isEnabled = false
-//                    VerifyButton.background = getDrawable(R.drawable.disabled_button_background)
-//                    return
-//                }
-//            }
-//        })
-//        inputCode2.addTextChangedListener(object: TextWatcher {
-//            override fun afterTextChanged(s: Editable?) {
-//                if (s.toString().length == 1) {
-//                    inputCode3.requestFocus()
-//                }
-//                else if(s.toString().length == 0) {
-//                    inputCode1.requestFocus()
-//                }
-//            }
-//
-//            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-//
-//            }
-//
-//            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-//                val code = inputCode1.text.toString() + inputCode2.text.toString() + inputCode3.text.toString() + inputCode4.text.toString() + inputCode5.text.toString() + inputCode6.text.toString()
-//                if (code.length == 6) {
-//                    VerifyButton.isEnabled = true
-//                    VerifyButton.background = getDrawable(R.drawable.enabled_button_background)
-//                    return
-//                }else{
-//                    VerifyButton.isEnabled = false
-//                    VerifyButton.background = getDrawable(R.drawable.disabled_button_background)
-//                    return
-//                }
-//            }
-//        })
-//        inputCode3.addTextChangedListener(object: TextWatcher {
-//            override fun afterTextChanged(s: Editable?) {
-//                if (s.toString().length == 1) {
-//                    inputCode4.requestFocus()
-//                }
-//                else if(s.toString().length == 0) {
-//                    inputCode2.requestFocus()
-//                }
-//            }
-//
-//            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-//
-//            }
-//
-//            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-//                val code = inputCode1.text.toString() + inputCode2.text.toString() + inputCode3.text.toString() + inputCode4.text.toString() + inputCode5.text.toString() + inputCode6.text.toString()
-//                if (code.length == 6) {
-//                    VerifyButton.isEnabled = true
-//                    VerifyButton.background = getDrawable(R.drawable.enabled_button_background)
-//                    return
-//                }else{
-//                    VerifyButton.isEnabled = false
-//                    VerifyButton.background = getDrawable(R.drawable.disabled_button_background)
-//                    return
-//                }
-//            }
-//        })
-//        inputCode4.addTextChangedListener(object: TextWatcher {
-//            override fun afterTextChanged(s: Editable?) {
-//                if (s.toString().length == 1) {
-//                    inputCode5.requestFocus()
-//                }
-//                else if(s.toString().length == 0) {
-//                    inputCode3.requestFocus()
-//                }
-//            }
-//
-//            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-//
-//            }
-//
-//            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-//                val code = inputCode1.text.toString() + inputCode2.text.toString() + inputCode3.text.toString() + inputCode4.text.toString() + inputCode5.text.toString() + inputCode6.text.toString()
-//                if (code.length == 6) {
-//                    VerifyButton.isEnabled = true
-//                    VerifyButton.background = getDrawable(R.drawable.enabled_button_background)
-//                    return
-//                }else{
-//                    VerifyButton.isEnabled = false
-//                    VerifyButton.background = getDrawable(R.drawable.disabled_button_background)
-//                    return
-//                }
-//            }
-//        })
-//        inputCode5.addTextChangedListener(object: TextWatcher {
-//            override fun afterTextChanged(s: Editable?) {
-//                if (s.toString().length == 1) {
-//                    inputCode6.requestFocus()
-//                }
-//                else if(s.toString().length == 0) {
-//                    inputCode4.requestFocus()
-//                }
-//            }
-//
-//            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-//
-//            }
-//
-//            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-//                val code = inputCode1.text.toString() + inputCode2.text.toString() + inputCode3.text.toString() + inputCode4.text.toString() + inputCode5.text.toString() + inputCode6.text.toString()
-//                if (code.length == 6) {
-//                    VerifyButton.isEnabled = true
-//                    VerifyButton.background = getDrawable(R.drawable.enabled_button_background)
-//                    return
-//                }else{
-//                    VerifyButton.isEnabled = false
-//                    VerifyButton.background = getDrawable(R.drawable.disabled_button_background)
-//                    return
-//                }
-//            }
-//        })
-//        inputCode6.addTextChangedListener(object: TextWatcher {
-//            override fun afterTextChanged(s: Editable?) {
-//                if(s.toString().length == 0) {
-//                    inputCode5.requestFocus()
-//                }
-//            }
-//
-//            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-//            }
-//
-//            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-//                val code = inputCode1.text.toString() + inputCode2.text.toString() + inputCode3.text.toString() + inputCode4.text.toString() + inputCode5.text.toString() + inputCode6.text.toString()
-//                if (code.length == 6) {
-//                    VerifyButton.isEnabled = true
-//                    VerifyButton.background = getDrawable(R.drawable.enabled_button_background)
-//                    return
-//                }else{
-//                    VerifyButton.isEnabled = false
-//                    VerifyButton.background = getDrawable(R.drawable.disabled_button_background)
-//                    return
-//                }
-//            }
-//        })
-
         class GenericKeyEvent internal constructor(private val currentView: EditText, private val previousView: EditText?) : View.OnKeyListener{
             override fun onKey(p0: View?, keyCode: Int, event: KeyEvent?): Boolean {
                 if(event!!.action == KeyEvent.ACTION_DOWN && keyCode == KeyEvent.KEYCODE_DEL && currentView.id != R.id.inputCode1 && currentView.text.isEmpty()) {
@@ -329,10 +169,12 @@ class VerifyOTPActivity : AppCompatActivity() {
 
 
         VerifyButton.setOnClickListener(){
-            progressBar2.visibility = View.VISIBLE
-            buttonVerify.visibility = View.GONE
-            val code : String = inputCode1.getText().toString() + inputCode2.getText().toString() + inputCode3.getText().toString() + inputCode4.getText().toString() + inputCode5.getText().toString() + inputCode6.getText().toString()
-            verifyPhoneNumberWithCode(storedVerificationId, code)
+//            progressBar2.visibility = View.VISIBLE
+//            buttonVerify.visibility = View.GONE
+//            val code : String = inputCode1.getText().toString() + inputCode2.getText().toString() + inputCode3.getText().toString() + inputCode4.getText().toString() + inputCode5.getText().toString() + inputCode6.getText().toString()
+//            verifyPhoneNumberWithCode(storedVerificationId, code)
+            val intent = Intent(this, VerifyEmailActivity::class.java)
+            startActivity(intent)
         }
 
         resendOTP.setOnClickListener(){
