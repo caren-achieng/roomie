@@ -1,8 +1,20 @@
 <resources>
-    <string name="app_name">Roomie</string>
+    <string name="app_name">roomie</string>
     <string name="launch_name">roomie.</string>
     <string name="create_account">CREATE ACCOUNT</string>
     <string name="sign_in">SIGN IN</string>
     <string name="privacy_policy">By tapping \"Create account\" or\" Sign in\", you agree to our Terms. Learn how we process your data in our Privacy Policy and Cookies Policy.</string>
     <string name="trouble_signing_in">Trouble signing in?</string>
+    <string name="continue_txt">CONTINUE</string>
+    <string name="did_not_receive_code">Didn\'t receive the code?</string>
+    <string name="resend_code">Resend Code</string>
+    <string name="enter_verification_code_sent_to">Enter verification code sent to</string>
+    <string name="verification_code">Verification code</string>
+    <string name="what_is_your_email">What\'s your email?</string>
+    <string name="don_t_lose_access_to_your_account_verify_your_email">Don\'t lose access to your account, verify your email.</string>
+    <string name="enter_email">Enter email</string>
+    <string name="my_number_is">My number is</string>
+    <string name="ke_254">KE +254</string>
+    <string name="_712345678">712345678</string>
+    <string name="we_will_send_a_text_with_a_verification_code_message_and_data_rates_may_apply">We will send a text with a verification code. Message and data rates may apply.</string>
 </resources>
