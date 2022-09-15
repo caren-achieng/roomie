@@ -11,178 +11,135 @@
     <LinearLayout
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_marginTop="30dp">
 
         <ImageView
-            android:layout_width="250dp"
+            android:layout_width="150dp"
             android:layout_height="150dp"
+            android:layout_marginTop="-25dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="150dp"
-            android:src="@drawable/roomie_white"
+            android:src="@drawable/roomie_green"
             />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:text="Enter verification code sent to"
+            android:text="Welcome to Roomie."
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginTop="-45dp"
+            android:textSize="25sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Please follow these house rules."
+            android:gravity="center"
             android:textColor="@color/dark_grey"
             android:textSize="16sp" />
 
         <TextView
-            android:id="@+id/textMobile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:layout_marginStart="40dp"
-            android:layout_marginEnd="60dp"
-            android:textColor="@color/dark_grey"
+            android:text="Be yourself."
+            android:gravity="left"
+            android:textColor="@color/my_green"
             android:textStyle="bold"
-            android:textSize="25sp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="40dp"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="5dp"
+            android:text="Make sure your photos, age and bio are true\nto who you are"
+            android:textColor="@color/light_grey"
+            android:textSize="14sp"
             />
 
-        <LinearLayout
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent"
-            android:layout_marginTop="30dp"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <EditText
-                android:id="@+id/inputCode1"
-                android:layout_width="40dp"
-                android:layout_height="45dp"
-                android:gravity="center"
-                android:imeOptions="actionNext"
-                android:importantForAutofill="no"
-                android:inputType="number"
-                android:maxLength="1"
-                android:textColor="@color/light_grey"
-                android:textStyle="bold"
-                android:textSize="24sp"
-                tools:ignore="LabelFor"
-                />
-            <EditText
-                android:id="@+id/inputCode2"
-                android:layout_width="40dp"
-                android:layout_height="45dp"
-                android:layout_marginStart="4dp"
-                android:gravity="center"
-                android:imeOptions="actionNext"
-                android:importantForAutofill="no"
-                android:inputType="number"
-                android:maxLength="1"
-                android:textColor="@color/light_grey"
-                android:textStyle="bold"
-                android:textSize="24sp"
-                tools:ignore="LabelFor"
-                />
-            <EditText
-                android:id="@+id/inputCode3"
-                android:layout_width="40dp"
-                android:layout_height="45dp"
-                android:layout_marginStart="4dp"
-                android:gravity="center"
-                android:imeOptions="actionNext"
-                android:importantForAutofill="no"
-                android:inputType="number"
-                android:maxLength="1"
-                android:textColor="@color/light_grey"
-                android:textStyle="bold"
-                android:textSize="24sp"
-                tools:ignore="LabelFor"
-                />
-            <EditText
-                android:id="@+id/inputCode4"
-                android:layout_width="40dp"
-                android:layout_height="45dp"
-                android:layout_marginStart="4dp"
-                android:gravity="center"
-                android:imeOptions="actionNext"
-                android:importantForAutofill="no"
-                android:inputType="number"
-                android:maxLength="1"
-                android:textColor="@color/light_grey"
-                android:textStyle="bold"
-                android:textSize="24sp"
-                tools:ignore="LabelFor"
-                />
-            <EditText
-                android:id="@+id/inputCode5"
-                android:layout_width="40dp"
-                android:layout_height="45dp"
-                android:layout_marginStart="4dp"
-                android:gravity="center"
-                android:imeOptions="actionNext"
-                android:importantForAutofill="no"
-                android:inputType="number"
-                android:maxLength="1"
-                android:textColor="@color/light_grey"
-                android:textStyle="bold"
-                android:textSize="24sp"
-                tools:ignore="LabelFor"
-                />
-            <EditText
-                android:id="@+id/inputCode6"
-                android:layout_width="40dp"
-                android:layout_height="45dp"
-                android:layout_marginStart="4dp"
-                android:gravity="center"
-                android:imeOptions="actionDone"
-                android:importantForAutofill="no"
-                android:inputType="number"
-                android:maxLength="1"
-                android:textColor="@color/light_grey"
-                android:textStyle="bold"
-                android:textSize="24sp"
-                tools:ignore="LabelFor"
-                />
-
-        </LinearLayout>
-
-        <LinearLayout
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:gravity="center"
-            android:orientation="horizontal">
+            android:text="Stay safe."
+            android:gravity="left"
+            android:textColor="@color/my_green"
+            android:textStyle="bold"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="15dp"
+            android:textSize="20sp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Didn't receive the code?"
-                android:textColor="@color/light_grey"
-                android:textSize="14sp"
-                />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="5dp"
+            android:text="Don't be too quick to give out personal\ninformation. Rent out safely."
+            android:textColor="@color/light_grey"
+            android:textSize="14sp"
+            />
 
-            <TextView
-                android:id="@+id/textResendOtp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:text="Resend Code"
-                android:textColor="@color/my_green"
-                android:textSize="15sp"
-                android:textStyle="bold"
-                />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Play it cool."
+            android:gravity="left"
+            android:textColor="@color/my_green"
+            android:textStyle="bold"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="15dp"
+            android:textSize="20sp" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="5dp"
+            android:text="Respect others and treat them as you would\nlike to be treated."
+            android:textColor="@color/light_grey"
+            android:textSize="14sp"
+            />
 
-        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Be proactive."
+            android:gravity="left"
+            android:textColor="@color/my_green"
+            android:textStyle="bold"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="15dp"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="5dp"
+            android:text="Always report bad behaviour."
+            android:textColor="@color/light_grey"
+            android:textSize="14sp"
+            />
+
         <Button
             android:id="@+id/Agree"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="40dp"
-            android:background="@drawable/button_enabled_change"
+            android:background="@drawable/enabled_button_background"
             android:text="I Agree"
-            android:textColor="@drawable/button_textcolor_enable"
+            android:textColor="@color/white"
             android:textSize="21sp"
             android:textAllCaps="false"
             />
-
-
-
 
     </LinearLayout>
 

@@ -104,7 +104,7 @@ class VerifyOTPActivity : AppCompatActivity() {
         resendToken = intent.getStringExtra("resendToken") as PhoneAuthProvider.ForceResendingToken?
 
         val storedVerificationId = intent.getStringExtra("storedVerificationId")
-        VerifyButton.isEnabled = false
+//        VerifyButton.isEnabled = false
 
         class GenericKeyEvent internal constructor(private val currentView: EditText, private val previousView: EditText?) : View.OnKeyListener{
             override fun onKey(p0: View?, keyCode: Int, event: KeyEvent?): Boolean {
@@ -131,10 +131,10 @@ class VerifyOTPActivity : AppCompatActivity() {
                 val text = editable.toString()
                 val code = inputCode1.text.toString() + inputCode2.text.toString() + inputCode3.text.toString() + inputCode4.text.toString() + inputCode5.text.toString() + inputCode6.text.toString()
                 if (code.length == 6) {
-                    VerifyButton.isEnabled = true
+//                    VerifyButton.isEnabled = true
                     VerifyButton.background = getDrawable(R.drawable.enabled_button_background)
                 }else{
-                    VerifyButton.isEnabled = false
+//                    VerifyButton.isEnabled = false
                     VerifyButton.background = getDrawable(R.drawable.disabled_button_background)
                 }
                 when (currentView.id) {
