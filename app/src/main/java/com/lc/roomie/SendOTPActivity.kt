@@ -7,12 +7,14 @@ import androidx.appcompat.app.AppCompatActivity
 
 import android.app.Activity
 import android.content.Intent
+import android.os.Build
 import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ProgressBar
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import com.google.firebase.FirebaseException
 import com.google.firebase.FirebaseTooManyRequestsException
 import com.google.firebase.auth.FirebaseAuth
@@ -38,6 +40,7 @@ class SendOTPActivity : AppCompatActivity() {
     private lateinit var callbacks: PhoneAuthProvider.OnVerificationStateChangedCallbacks
 
 
+    @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_send_otp)
@@ -121,6 +124,7 @@ class SendOTPActivity : AppCompatActivity() {
                 intent.putExtra("storedResendToken", resendToken)
                 intent.putExtra("phoneNumber", phoneNumber.text.toString())
                 startActivity(intent)
+                finish()
             }
         }
         // [END phone_auth_callbacks]
@@ -140,7 +144,9 @@ class SendOTPActivity : AppCompatActivity() {
 //            }
 //            startPhoneNumberVerification(mobileNumber)
             val intent = Intent(this@SendOTPActivity, VerifyOTPActivity::class.java)
+            intent.putExtra("phoneNumber", phoneNumber.text.toString())
             startActivity(intent)
+            finish()
 
         }
     }

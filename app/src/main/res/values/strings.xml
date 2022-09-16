@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">roomie</string>
+    <string name="app_name">Roomie</string>
     <string name="launch_name">roomie.</string>
     <string name="create_account">CREATE ACCOUNT</string>
     <string name="sign_in">SIGN IN</string>

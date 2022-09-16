@@ -63,7 +63,7 @@
                 android:textStyle="bold"
                 android:textSize="24sp"
                 tools:ignore="LabelFor"
-                android:autofillHints="CloudOTP"
+                android:autofillHints="CloudOTP{1}"
 
                 />
             <EditText
@@ -80,7 +80,7 @@
                 android:textStyle="bold"
                 android:textSize="24sp"
                 tools:ignore="LabelFor"
-                android:autofillHints="CloudOTP"
+                android:autofillHints="CloudOTP{2}"
                 />
             <EditText
             android:id="@+id/inputCode3"
@@ -96,7 +96,7 @@
             android:textStyle="bold"
             android:textSize="24sp"
             tools:ignore="LabelFor"
-            android:autofillHints="CloudOTP"
+            android:autofillHints="CloudOTP{3}"
             />
             <EditText
             android:id="@+id/inputCode4"
@@ -112,7 +112,7 @@
             android:textStyle="bold"
             android:textSize="24sp"
             tools:ignore="LabelFor"
-            android:autofillHints="CloudOTP"
+            android:autofillHints="CloudOTP{4}"
             />
             <EditText
             android:id="@+id/inputCode5"
@@ -128,7 +128,7 @@
             android:textStyle="bold"
             android:textSize="24sp"
             tools:ignore="LabelFor"
-            android:autofillHints="CloudOTP"
+            android:autofillHints="CloudOTP{5}"
             />
             <EditText
             android:id="@+id/inputCode6"
@@ -143,7 +143,7 @@
             android:textColor="@color/light_grey"
             android:textStyle="bold"
             android:textSize="24sp"
-            android:autofillHints="CloudOTP"
+            android:autofillHints="CloudOTP{6}"
             tools:ignore="LabelFor"
             />
 
