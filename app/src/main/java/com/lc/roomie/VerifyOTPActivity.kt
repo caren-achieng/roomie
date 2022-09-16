@@ -158,7 +158,7 @@ class VerifyOTPActivity : AppCompatActivity() {
                 }else{
 //                    VerifyButton.isEnabled = false
                     VerifyButton.background = getDrawable(R.drawable.disabled_button_background)
-                }f
+                }
                 when (currentView.id) {
                     R.id.inputCode1 -> if (text.length == 1) nextView!!.requestFocus()
                     R.id.inputCode2 -> if (text.length == 1) nextView!!.requestFocus()
