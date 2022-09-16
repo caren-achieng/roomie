@@ -151,8 +151,6 @@ class VerifyOTPActivity : AppCompatActivity() {
 
             override fun afterTextChanged(editable: Editable) {
                 val text = editable.toString()
-<<<<<<< HEAD
-=======
                 val code = inputCode1.text.toString() + inputCode2.text.toString() + inputCode3.text.toString() + inputCode4.text.toString() + inputCode5.text.toString() + inputCode6.text.toString()
                 if (code.length == 6) {
 //                    VerifyButton.isEnabled = true
@@ -160,8 +158,7 @@ class VerifyOTPActivity : AppCompatActivity() {
                 }else{
 //                    VerifyButton.isEnabled = false
                     VerifyButton.background = getDrawable(R.drawable.disabled_button_background)
-                }
->>>>>>> f1150873d4b9107eaa74766051d4cdeceff1d948
+                }g
                 when (currentView.id) {
                     R.id.inputCode1 -> if (text.length == 1) nextView!!.requestFocus()
                     R.id.inputCode2 -> if (text.length == 1) nextView!!.requestFocus()
