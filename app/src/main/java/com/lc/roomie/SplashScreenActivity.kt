@@ -22,9 +22,10 @@ class SplashScreenActivity : AppCompatActivity() {
         val homeIntent = Intent(this@SplashScreenActivity, LoginActivity::class.java)
 
         Handler(Looper.getMainLooper()).postDelayed({
-          startActivity(homeIntent)
+            startActivity(homeIntent)
             finish()
 
         }, splashScreenTimeOut.toLong())
+
     }
 }

@@ -1,7 +1,9 @@
 package com.lc.roomie
 
 
+import SMSReceiver
 import android.content.Intent
+import android.content.IntentFilter
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -11,10 +13,12 @@ import android.view.KeyEvent
 import android.view.View
 import android.widget.*
 import androidx.annotation.RequiresApi
+import com.google.android.gms.auth.api.phone.SmsRetriever
 import com.google.firebase.FirebaseException
 import com.google.firebase.FirebaseTooManyRequestsException
 import com.google.firebase.auth.*
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_send_otp.*
 import kotlinx.android.synthetic.main.activity_verify_otp.*
@@ -27,13 +31,20 @@ class VerifyOTPActivity : AppCompatActivity() {
     private lateinit var callbacks: PhoneAuthProvider.OnVerificationStateChangedCallbacks
     private var storedVerificationId: String? = ""
     private var resendToken: PhoneAuthProvider.ForceResendingToken? = null
+    //Used to read sms to get OPT code
+    private var intentFilter: IntentFilter? = null
+    private var smsReceiver: SMSReceiver? = null
 
     @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_verify_otp)
 
+
         auth = Firebase.auth
+        //Initialize SMS listener
+        initSmsListener()
+        initBroadCast()
 
         val VerifyButton = findViewById<Button>(R.id.buttonVerify)
         val resendOTP = findViewById<TextView>(R.id.textResendOtp)
@@ -44,6 +55,9 @@ class VerifyOTPActivity : AppCompatActivity() {
         val inputCode4 = findViewById<EditText>(R.id.inputCode4)
         val inputCode5 = findViewById<EditText>(R.id.inputCode5)
         val inputCode6 = findViewById<EditText>(R.id.inputCode6)
+        val textMobile = findViewById<TextView>(R.id.textMobile)
+
+        textMobile.setText("+254"+intent.getStringExtra("phoneNumber").toString())
 
         val phoneNumber = intent.getStringExtra("phoneNumber")
 
@@ -108,6 +122,14 @@ class VerifyOTPActivity : AppCompatActivity() {
 
         class GenericKeyEvent internal constructor(private val currentView: EditText, private val previousView: EditText?) : View.OnKeyListener{
             override fun onKey(p0: View?, keyCode: Int, event: KeyEvent?): Boolean {
+                val code = inputCode1.text.toString() + inputCode2.text.toString() + inputCode3.text.toString() + inputCode4.text.toString() + inputCode5.text.toString() + inputCode6.text.toString()
+                if (code.length == 6) {
+                    VerifyButton.isEnabled = true
+                    VerifyButton.background = getDrawable(R.drawable.enabled_button_background)
+                }else{
+                    VerifyButton.isEnabled = false
+                    VerifyButton.background = getDrawable(R.drawable.disabled_button_background)
+                }
                 if(event!!.action == KeyEvent.ACTION_DOWN && keyCode == KeyEvent.KEYCODE_DEL && currentView.id != R.id.inputCode1 && currentView.text.isEmpty()) {
                     //If current is empty then previous EditText's number will also be deleted
                     previousView!!.text = null
@@ -136,7 +158,7 @@ class VerifyOTPActivity : AppCompatActivity() {
                 }else{
 //                    VerifyButton.isEnabled = false
                     VerifyButton.background = getDrawable(R.drawable.disabled_button_background)
-                }
+                }f
                 when (currentView.id) {
                     R.id.inputCode1 -> if (text.length == 1) nextView!!.requestFocus()
                     R.id.inputCode2 -> if (text.length == 1) nextView!!.requestFocus()
@@ -175,6 +197,7 @@ class VerifyOTPActivity : AppCompatActivity() {
 //            verifyPhoneNumberWithCode(storedVerificationId, code)
             val intent = Intent(this, VerifyEmailActivity::class.java)
             startActivity(intent)
+            finish()
         }
 
         resendOTP.setOnClickListener(){
@@ -184,6 +207,41 @@ class VerifyOTPActivity : AppCompatActivity() {
                 resendVerificationCode(phoneNumber, resendToken)
             }
         }
+    }
+
+
+    private fun initBroadCast() {
+        intentFilter = IntentFilter(SmsRetriever.SMS_RETRIEVED_ACTION)
+        smsReceiver = SMSReceiver()
+        smsReceiver?.setOTPListener(object : SMSReceiver.OTPReceiveListener {
+            override fun onOTPReceived(otp: String?) {
+                showToast("OTP Received: $otp")
+            }
+        })
+    }
+
+    private fun initSmsListener() {
+        val client = SmsRetriever.getClient(this@VerifyOTPActivity)
+        client.startSmsRetriever()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        registerReceiver(smsReceiver, intentFilter)
+    }
+
+    private fun showToast(msg: String?) {
+        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show()
+    }
+
+    override fun onPause() {
+        super.onPause()
+        unregisterReceiver(smsReceiver)
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        smsReceiver = null
     }
 
     private fun resendVerificationCode(
@@ -216,23 +274,36 @@ class VerifyOTPActivity : AppCompatActivity() {
                     //intent to change page
                     val phone = auth.currentUser?.phoneNumber
                     val user = task.result?.user
+                    val data = hashMapOf(
+                        "uid" to auth.currentUser?.uid,
+                        "phone" to phone
+                    )
+
+                    val db = Firebase.firestore
+                    db.collection("users")
+                        .add(data)
+                        .addOnSuccessListener { documentReference ->
+                            Log.d("TAG", "DocumentSnapshot added with ID: ${documentReference.id}")
+                        }
+                        .addOnFailureListener { e ->
+                            Log.w("TAG", "Error adding document", e)
+                        }
                     Log.d(TAG, "signInWithCredential:success")
                     Toast.makeText(this, "Login Successful $phone", Toast.LENGTH_SHORT).show()
                     val intent = Intent(this, VerifyEmailActivity::class.java)
                     startActivity(intent)
+                    finish()
 
 
                 } else {
                     // Sign in failed, display a message and update the UI
                     Log.w(TAG, "signInWithCredential:failure", task.exception)
-                    progressBar2.visibility = View.GONE
-                    buttonVerify.visibility = View.VISIBLE
                     if (task.exception is FirebaseAuthInvalidCredentialsException) {
                         // The verification code entered was invalid
                         Toast.makeText(this, "Invalid Verification Code", Toast.LENGTH_SHORT).show()
-                        progressBar2.visibility = View.GONE
-                        buttonVerify.visibility = View.VISIBLE
                     }
+                    progressBar2.visibility = View.GONE
+                    buttonVerify.visibility = View.VISIBLE
                     // Update UI
                 }
             }
