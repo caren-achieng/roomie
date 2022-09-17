@@ -19,6 +19,7 @@ android {
 
         applicationId "com.lc.roomie"
         minSdk 19
+        multiDexEnabled true
         targetSdk 32
         versionCode 1
         versionName "1.0"

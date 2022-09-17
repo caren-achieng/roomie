@@ -18,6 +18,7 @@ import com.google.firebase.FirebaseException
 import com.google.firebase.FirebaseTooManyRequestsException
 import com.google.firebase.auth.*
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_send_otp.*
@@ -158,7 +159,7 @@ class VerifyOTPActivity : AppCompatActivity() {
                 }else{
 //                    VerifyButton.isEnabled = false
                     VerifyButton.background = getDrawable(R.drawable.disabled_button_background)
-                }f
+                }
                 when (currentView.id) {
                     R.id.inputCode1 -> if (text.length == 1) nextView!!.requestFocus()
                     R.id.inputCode2 -> if (text.length == 1) nextView!!.requestFocus()
@@ -280,19 +281,23 @@ class VerifyOTPActivity : AppCompatActivity() {
                     )
 
                     val db = Firebase.firestore
+                    var reference: String? = null
                     db.collection("users")
                         .add(data)
                         .addOnSuccessListener { documentReference ->
+                            reference = documentReference.id
                             Log.d("TAG", "DocumentSnapshot added with ID: ${documentReference.id}")
+                            Log.d(TAG, "signInWithCredential:success")
+                            Toast.makeText(this, "Login Successful $phone", Toast.LENGTH_SHORT).show()
+                            val intent = Intent(this, VerifyEmailActivity::class.java)
+                            intent.putExtra("docRef", reference.toString())
+                            startActivity(intent)
+                            finish()
                         }
                         .addOnFailureListener { e ->
                             Log.w("TAG", "Error adding document", e)
                         }
-                    Log.d(TAG, "signInWithCredential:success")
-                    Toast.makeText(this, "Login Successful $phone", Toast.LENGTH_SHORT).show()
-                    val intent = Intent(this, VerifyEmailActivity::class.java)
-                    startActivity(intent)
-                    finish()
+
 
 
                 } else {
