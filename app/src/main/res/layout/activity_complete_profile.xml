@@ -1,11 +1,213 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CompleteProfileActivity">
+    android:overScrollMode="never"
+    android:scrollbars="none"
+    android:fitsSystemWindows="true"
+    tools:context=".VerifyEmailActivity">
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:layout_marginLeft="40dp"
+            android:text="Complete your profile."
+            android:textColor="@color/black"
+            android:textSize="33sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:text="Personal Information"
+            android:textColor="@color/black"
+            android:textSize="19sp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="40dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginStart="40dp"
+            android:orientation="horizontal">
 
 
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+                android:background="@color/transparent"
+                android:hint="First Name"
+                android:imeOptions="actionDone"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                />
+        </LinearLayout>
+
+        <View
+            android:layout_width="300dp"
+            android:layout_height="2dp"
+            android:layout_marginLeft="40sp"
+            android:background="@color/dark_grey"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="5dp"
+            android:text="This is how it will appear in Roomie ,and you \n will not be able to change it."
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            />
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/transparent"
+                android:hint="Last Name"
+                android:imeOptions="actionDone"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                />
+        </LinearLayout>
+
+        <View
+            android:layout_width="300dp"
+            android:layout_height="2dp"
+            android:layout_marginLeft="40sp"
+            android:background="@color/dark_grey"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="5dp"
+            android:text="This is how it will appear in Roomie ,and you \n will not be able to change it."
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            />
+
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/birthday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:datePickerMode="spinner"
+                android:calenderViewShown="false"
+                android:background="@color/transparent"
+                android:hint="Birthday"
+                android:imeOptions="actionDone"
+                android:importantForAutofill="no"
+                android:inputType="date"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                />
+        </LinearLayout>
+
+        <View
+            android:layout_width="300dp"
+            android:layout_height="2dp"
+            android:layout_marginLeft="40sp"
+            android:background="@color/dark_grey"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="5dp"
+            android:text="Your age will be public."
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/transparent"
+            android:hint="Gender"
+            android:imeOptions="actionDone"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="5dp">
+            <RadioButton android:id="@+id/radio_pirates"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="150dp"
+                android:text="Male"
+                android:onClick="onRadioButtonClicked"
+                tools:ignore="OnClick" />
+            <RadioButton android:id="@+id/radio_ninjas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female"
+                android:onClick="onRadioButtonClicked"
+                tools:ignore="OnClick" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/VerifyEmail"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="150dp"
+            android:background="@drawable/button_enabled_change"
+            android:text="@string/continue_txt"
+            android:textColor="@drawable/button_textcolor_enable"
+            android:textSize="21sp"
+            />
+
+    </LinearLayout>
+</ScrollView>

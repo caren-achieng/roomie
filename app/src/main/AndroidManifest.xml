@@ -16,9 +16,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Roomie"
         tools:targetApi="31">
-        <activity
-            android:name=".CompleteProfileActivity"
-            android:exported="false" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
@@ -33,6 +30,11 @@
             android:screenOrientation="portrait"
             android:theme="@style/Theme.Transparent"
             android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".CompleteProfileActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Transparent"
+            android:windowSoftInputMode="adjustResize"/>
         <activity
             android:name=".VerifyEmailActivity"
             android:exported="false"
