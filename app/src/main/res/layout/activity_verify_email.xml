@@ -71,9 +71,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="150dp"
-            android:background="@drawable/button_enabled_change"
+            android:background="@drawable/disabled_button_background"
             android:text="@string/continue_txt"
-            android:textColor="@drawable/button_textcolor_enable"
+            android:textColor="@color/white"
             android:textSize="21sp"
             />
 

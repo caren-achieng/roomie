@@ -17,4 +17,13 @@
     <string name="ke_254">KE +254</string>
     <string name="_712345678">712345678</string>
     <string name="we_will_send_a_text_with_a_verification_code_message_and_data_rates_may_apply">We will send a text with a verification code. Message and data rates may apply.</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="complete_your_profile">Complete your profile.</string>
+    <string name="personal_information">Personal Information</string>
+    <string name="first_name">First Name</string>
+    <string name="this_is_how_it_will_appear_in_roomie_and_you_n_will_not_be_able_to_change_it">This is how it will appear in Roomie ,and you \n will not be able to change it.</string>
+    <string name="last_name">Last Name</string>
+    <string name="your_age_will_be_public">Your age will be public.</string>
+    <string name="gender">Gender</string>
 </resources>

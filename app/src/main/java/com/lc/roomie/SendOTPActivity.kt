@@ -48,7 +48,7 @@ class SendOTPActivity : AppCompatActivity() {
         val progressBar: ProgressBar = findViewById(R.id.progressBar)
         val phoneNumber: EditText = findViewById(R.id.inputMobile)
         val SendOTP: Button = findViewById(R.id.SendOtp)
-        SendOTP.isEnabled = false
+//        SendOTP.isEnabled = false
 
 
         phoneNumber.setOnKeyListener {
