@@ -11,6 +11,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import androidx.annotation.RequiresApi
+import com.google.android.material.textfield.TextInputLayout
 import com.google.api.DistributionOrBuilder
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
@@ -22,7 +23,7 @@ class VerifyEmailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_verify_email)
 
-        val email = findViewById<EditText>(R.id.inputEmail)
+        val email = findViewById<TextInputLayout>(R.id.inputEmail)
         val db = Firebase.firestore
         val verifyEmail = findViewById<Button>(R.id.VerifyEmail)
 

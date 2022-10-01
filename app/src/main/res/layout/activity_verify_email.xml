@@ -14,6 +14,7 @@
         android:layout_width="match_parent"
         android:orientation="vertical">
 
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -38,40 +39,31 @@
 
         <LinearLayout
             android:layout_height="wrap_content"
-            android:layout_width="match_parent"
-            android:layout_marginStart="40dp"
+            android:layout_width="300dp"
+            android:layout_gravity="center_horizontal"
             android:orientation="horizontal">
 
-
-            <EditText
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/inputEmail"
-                android:layout_width="wrap_content"
-                android:layout_height="48dp"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="-10dp"
-                android:background="@color/transparent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:hint="@string/enter_email"
-                android:textColorHint="@color/dark_grey"
-                android:imeOptions="actionDone"
-                android:importantForAutofill="no"
-                android:inputType="textEmailAddress"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                />
-        </LinearLayout>
+                >
 
-        <View
-            android:layout_width="256dp"
-            android:layout_height="2dp"
-            android:layout_marginStart="50sp"
-            android:background="@color/light_grey"/>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
 
         <Button
             android:id="@+id/VerifyEmail"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="150dp"
+            android:layout_marginTop="60dp"
             android:background="@drawable/disabled_button_background"
             android:text="@string/continue_txt"
             android:textColor="@color/white"
