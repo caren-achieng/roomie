@@ -44,7 +44,7 @@
 
             <EditText
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="10dp"
 
@@ -54,8 +54,8 @@
                 android:importantForAutofill="no"
                 android:inputType="text"
                 android:textColor="@color/black"
-                android:textSize="17sp"
-                />
+                android:textColorHint="#546E7A"
+                android:textSize="17sp" />
         </LinearLayout>
 
         <View
@@ -86,7 +86,7 @@
 
             <EditText
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="10dp"
                 android:background="@color/transparent"
@@ -95,8 +95,8 @@
                 android:importantForAutofill="no"
                 android:inputType="text"
                 android:textColor="@color/black"
-                android:textSize="17sp"
-                />
+                android:textColorHint="#546E7A"
+                android:textSize="17sp" />
         </LinearLayout>
 
         <View
@@ -133,6 +133,7 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="10dp"
                 android:datePickerMode="spinner"
+                android:calendarViewShown="false"
                 />
         </LinearLayout>
 
@@ -154,16 +155,13 @@
             android:textSize="14sp"
             />
 
-        <EditText
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
             android:layout_marginTop="20dp"
             android:background="@color/transparent"
-            android:hint="@string/gender"
-            android:imeOptions="actionDone"
-            android:importantForAutofill="no"
-            android:inputType="text"
+            android:text="@string/gender"
             android:textColor="@color/black"
             android:textSize="17sp"
             />
@@ -174,20 +172,22 @@
             android:orientation="horizontal"
             android:layout_marginLeft="40dp"
             android:layout_marginTop="5dp">
+
             <RadioButton
                 android:id="@+id/radio_male"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:layout_marginRight="150dp"
-                android:text="@string/male"
                 android:onClick="onRadioButtonClicked"
-                tools:ignore="OnClick"
-                />
+                android:text="@string/male"
+                android:textColor="@color/black"
+                tools:ignore="OnClick" />
             <RadioButton
                 android:id="@+id/radio_female"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:text="@string/female"
+                android:textColor="@color/black"
                 android:onClick="onRadioButtonClicked"
                 tools:ignore="OnClick" />
         </RadioGroup>
@@ -198,9 +198,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="150dp"
-            android:background="@drawable/button_enabled_change"
+            android:background="@drawable/disabled_button_background"
             android:text="@string/continue_txt"
-            android:textColor="@drawable/button_textcolor_enable"
+            android:textColor="@color/white"
             android:textSize="21sp"
             />
 

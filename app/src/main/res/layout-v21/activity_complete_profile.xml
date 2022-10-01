@@ -7,7 +7,7 @@
     android:overScrollMode="never"
     android:scrollbars="none"
     android:fitsSystemWindows="true"
-    tools:context=".VerifyEmailActivity">
+    tools:context=".CompleteProfileActivity">
 
     <LinearLayout
         android:layout_height="wrap_content"
@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="60dp"
             android:layout_marginLeft="40dp"
-            android:text="Complete your profile."
+            android:text="@string/complete_your_profile"
             android:textColor="@color/black"
             android:textSize="33sp"
             android:textStyle="bold"/>
@@ -28,7 +28,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="start"
-            android:text="Personal Information"
+            android:text="@string/personal_information"
             android:textColor="@color/black"
             android:textSize="19sp"
             android:layout_marginTop="5dp"
@@ -44,18 +44,18 @@
 
             <EditText
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="10dp"
 
                 android:background="@color/transparent"
-                android:hint="First Name"
+                android:hint="@string/first_name"
                 android:imeOptions="actionDone"
                 android:importantForAutofill="no"
                 android:inputType="text"
                 android:textColor="@color/black"
-                android:textSize="17sp"
-                />
+                android:textColorHint="#546E7A"
+                android:textSize="17sp" />
         </LinearLayout>
 
         <View
@@ -71,7 +71,7 @@
             android:gravity="left"
             android:layout_marginLeft="40dp"
             android:layout_marginTop="5dp"
-            android:text="This is how it will appear in Roomie ,and you \n will not be able to change it."
+            android:text="@string/this_is_how_it_will_appear_in_roomie_and_you_n_will_not_be_able_to_change_it"
             android:textColor="@color/black"
             android:textSize="14sp"
             />
@@ -86,17 +86,17 @@
 
             <EditText
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="10dp"
                 android:background="@color/transparent"
-                android:hint="Last Name"
+                android:hint="@string/last_name"
                 android:imeOptions="actionDone"
                 android:importantForAutofill="no"
                 android:inputType="text"
                 android:textColor="@color/black"
-                android:textSize="17sp"
-                />
+                android:textColorHint="#546E7A"
+                android:textSize="17sp" />
         </LinearLayout>
 
         <View
@@ -112,7 +112,7 @@
             android:gravity="left"
             android:layout_marginLeft="40dp"
             android:layout_marginTop="5dp"
-            android:text="This is how it will appear in Roomie ,and you \n will not be able to change it."
+            android:text="@string/this_is_how_it_will_appear_in_roomie_and_you_n_will_not_be_able_to_change_it"
             android:textColor="@color/black"
             android:textSize="14sp"
             />
@@ -133,12 +133,7 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="10dp"
                 android:datePickerMode="spinner"
-                android:background="@color/transparent"
-                android:imeOptions="actionDone"
-                android:importantForAutofill="no"
-                android:inputType="date"
-                android:textColor="@color/black"
-                android:textSize="17sp"
+                android:calendarViewShown="false"
                 />
         </LinearLayout>
 
@@ -155,7 +150,7 @@
             android:gravity="left"
             android:layout_marginLeft="40dp"
             android:layout_marginTop="5dp"
-            android:text="Your age will be public."
+            android:text="@string/your_age_will_be_public"
             android:textColor="@color/black"
             android:textSize="14sp"
             />
@@ -166,10 +161,7 @@
             android:layout_marginLeft="40dp"
             android:layout_marginTop="20dp"
             android:background="@color/transparent"
-            android:hint="Gender"
-            android:imeOptions="actionDone"
-            android:importantForAutofill="no"
-            android:inputType="text"
+            android:text="@string/gender"
             android:textColor="@color/black"
             android:textSize="17sp"
             />
@@ -180,17 +172,22 @@
             android:orientation="horizontal"
             android:layout_marginLeft="40dp"
             android:layout_marginTop="5dp">
-            <RadioButton android:id="@+id/radio_pirates"
+
+            <RadioButton
+                android:id="@+id/radio_male"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:layout_marginRight="150dp"
-                android:text="Male"
                 android:onClick="onRadioButtonClicked"
+                android:text="@string/male"
+                android:textColor="@color/black"
                 tools:ignore="OnClick" />
-            <RadioButton android:id="@+id/radio_ninjas"
+            <RadioButton
+                android:id="@+id/radio_female"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Female"
+                android:layout_height="48dp"
+                android:text="@string/female"
+                android:textColor="@color/black"
                 android:onClick="onRadioButtonClicked"
                 tools:ignore="OnClick" />
         </RadioGroup>
@@ -201,9 +198,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="150dp"
-            android:background="@drawable/button_enabled_change"
+            android:background="@drawable/disabled_button_background"
             android:text="@string/continue_txt"
-            android:textColor="@drawable/button_textcolor_enable"
+            android:textColor="@color/white"
             android:textSize="21sp"
             />
 
