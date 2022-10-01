@@ -26,4 +26,5 @@
     <string name="last_name">Last Name</string>
     <string name="your_age_will_be_public">Your age will be public.</string>
     <string name="gender">Gender</string>
+    <string name="birth_date">Birth Date</string>
 </resources>

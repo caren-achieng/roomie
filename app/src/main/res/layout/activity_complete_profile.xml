@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:overScrollMode="never"
     android:scrollbars="none"
     android:fitsSystemWindows="true"
@@ -32,37 +32,32 @@
             android:textColor="@color/black"
             android:textSize="19sp"
             android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
             android:layout_marginLeft="40dp"
             android:textStyle="bold" />
 
         <LinearLayout
             android:layout_height="wrap_content"
-            android:layout_width="match_parent"
+            android:layout_width="300dp"
             android:layout_marginStart="40dp"
             android:orientation="horizontal">
 
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/first_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:endIconMode="clear_text"
+                android:hint="@string/first_name">
 
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="48dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="10dp"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    />
 
-                android:background="@color/transparent"
-                android:hint="@string/first_name"
-                android:imeOptions="actionDone"
-                android:importantForAutofill="no"
-                android:inputType="text"
-                android:textColor="@color/black"
-                android:textColorHint="#546E7A"
-                android:textSize="17sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
         </LinearLayout>
 
-        <View
-            android:layout_width="300dp"
-            android:layout_height="2dp"
-            android:layout_marginLeft="40sp"
-            android:background="@color/dark_grey"/>
 
 
         <TextView
@@ -70,7 +65,7 @@
             android:layout_height="wrap_content"
             android:gravity="left"
             android:layout_marginLeft="40dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="15dp"
             android:text="@string/this_is_how_it_will_appear_in_roomie_and_you_n_will_not_be_able_to_change_it"
             android:textColor="@color/black"
             android:textSize="14sp"
@@ -78,32 +73,28 @@
 
         <LinearLayout
             android:layout_height="wrap_content"
-            android:layout_width="match_parent"
+            android:layout_width="300dp"
             android:layout_marginStart="40dp"
             android:layout_marginTop="15dp"
             android:orientation="horizontal">
 
 
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="48dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="10dp"
-                android:background="@color/transparent"
-                android:hint="@string/last_name"
-                android:imeOptions="actionDone"
-                android:importantForAutofill="no"
-                android:inputType="text"
-                android:textColor="@color/black"
-                android:textColorHint="#546E7A"
-                android:textSize="17sp" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/last_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:endIconMode="clear_text"
+                android:hint="@string/last_name">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
 
-        <View
-            android:layout_width="300dp"
-            android:layout_height="2dp"
-            android:layout_marginLeft="40sp"
-            android:background="@color/dark_grey"/>
 
 
         <TextView
@@ -120,29 +111,27 @@
 
         <LinearLayout
             android:layout_height="wrap_content"
-            android:layout_width="match_parent"
+            android:layout_width="300dp"
             android:layout_marginStart="40dp"
             android:layout_marginTop="15dp"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/birth_date"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                />
 
             <DatePicker
                 android:id="@+id/birthday"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="10dp"
-                android:datePickerMode="spinner"
                 android:calendarViewShown="false"
+                android:datePickerMode="spinner"
                 />
         </LinearLayout>
-
-        <View
-            android:layout_width="300dp"
-            android:layout_height="2dp"
-            android:layout_marginLeft="40sp"
-            android:background="@color/dark_grey"/>
-
 
         <TextView
             android:layout_width="wrap_content"
