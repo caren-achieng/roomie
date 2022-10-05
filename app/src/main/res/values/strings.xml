@@ -22,7 +22,7 @@
     <string name="complete_your_profile">Complete your profile.</string>
     <string name="personal_information">Personal Information</string>
     <string name="first_name">First Name</string>
-    <string name="this_is_how_it_will_appear_in_roomie_and_you_n_will_not_be_able_to_change_it">This is how it will appear in Roomie ,and you \n will not be able to change it.</string>
+    <string name="this_is_how_it_will_appear_in_roomie_and_you_n_will_not_be_able_to_change_it">This is how it will appear in Roomie, and you \n will not be able to change it.</string>
     <string name="last_name">Last Name</string>
     <string name="your_age_will_be_public">Your age will be public.</string>
     <string name="gender">Gender</string>
