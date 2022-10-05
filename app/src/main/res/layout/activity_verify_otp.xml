@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="?attr/colorPrimary"
     android:overScrollMode="never"
     android:scrollbars="none"
     tools:context=".VerifyOTPActivity">
@@ -19,7 +20,7 @@
             android:layout_marginTop="60dp"
             android:layout_marginStart="40dp"
             android:text="@string/verification_code"
-            android:textColor="@color/black"
+            android:textColor="?attr/textAppearanceHeadline1"
             android:textSize="35sp"
             android:textStyle="bold"/>
 
@@ -28,7 +29,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="40dp"
                 android:text="@string/enter_verification_code_sent_to"
-                android:textColor="@color/dark_grey"
+                android:textColor="?attr/textAppearanceBody2"
                 android:textSize="16sp" />
 
             <TextView
@@ -38,7 +39,7 @@
                 android:layout_marginTop="4dp"
                 android:layout_marginStart="40dp"
                 android:layout_marginEnd="60dp"
-                android:textColor="@color/dark_grey"
+                android:textColor="?attr/textAppearanceBody2"
                 android:textStyle="bold"
                 android:textSize="25sp"
                 />
@@ -60,7 +61,7 @@
                 android:importantForAutofill="yes"
                 android:inputType="number"
                 android:maxLength="1"
-                android:textColor="@color/light_grey"
+                android:textColor="?attr/textAppearanceBody1"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 tools:ignore="LabelFor,SpeakableTextPresentCheck"
@@ -78,7 +79,7 @@
                 android:importantForAutofill="yes"
                 android:inputType="number"
                 android:maxLength="1"
-                android:textColor="@color/light_grey"
+                android:textColor="?attr/textAppearanceBody1"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 tools:ignore="LabelFor,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
@@ -94,7 +95,7 @@
                 android:importantForAutofill="yes"
                 android:inputType="number"
                 android:maxLength="1"
-                android:textColor="@color/light_grey"
+                android:textColor="?attr/textAppearanceBody1"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 tools:ignore="LabelFor,SpeakableTextPresentCheck" />
@@ -110,7 +111,7 @@
                 android:importantForAutofill="yes"
                 android:inputType="number"
                 android:maxLength="1"
-                android:textColor="@color/light_grey"
+                android:textColor="?attr/textAppearanceBody1"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 tools:ignore="LabelFor,SpeakableTextPresentCheck" />
@@ -126,7 +127,7 @@
                 android:importantForAutofill="yes"
                 android:inputType="number"
                 android:maxLength="1"
-                android:textColor="@color/light_grey"
+                android:textColor="?attr/textAppearanceBody1"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 tools:ignore="LabelFor,SpeakableTextPresentCheck" />
@@ -142,7 +143,7 @@
                 android:importantForAutofill="yes"
                 android:inputType="number"
                 android:maxLength="1"
-                android:textColor="@color/light_grey"
+                android:textColor="?attr/textAppearanceBody1"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 tools:ignore="LabelFor,SpeakableTextPresentCheck" />
@@ -160,7 +161,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/did_not_receive_code"
-                android:textColor="@color/dark_grey"
+                android:textColor="?attr/textAppearanceBody2"
                 android:textSize="14sp"
                 />
 
@@ -170,7 +171,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:text="@string/resend_code"
-                android:textColor="@color/my_green"
+                android:textColor="?attr/colorOnPrimary"
                 android:textSize="15sp"
                 android:textStyle="bold"
                 />

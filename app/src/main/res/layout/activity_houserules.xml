@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:overScrollMode="never"
+    android:background="?attr/colorPrimary"
     android:scrollbars="none"
     tools:context=".HouserulesActivity">
 
@@ -27,7 +28,7 @@
             android:layout_height="wrap_content"
             android:text="Welcome to Roomie."
             android:gravity="center"
-            android:textColor="@color/black"
+            android:textColor="?attr/textAppearanceHeadline1"
             android:textStyle="bold"
             android:layout_marginTop="-45dp"
             android:textSize="25sp" />
@@ -37,7 +38,7 @@
             android:layout_height="wrap_content"
             android:text="Please follow these house rules."
             android:gravity="center"
-            android:textColor="@color/dark_grey"
+            android:textColor="?attr/textAppearanceBody2"
             android:textSize="16sp" />
 
         <TextView
@@ -45,7 +46,7 @@
             android:layout_height="wrap_content"
             android:text="Be yourself."
             android:gravity="left"
-            android:textColor="@color/my_green"
+            android:textColor="?attr/colorOnPrimary"
             android:textStyle="bold"
             android:layout_marginLeft="40dp"
             android:layout_marginTop="40dp"
@@ -58,7 +59,7 @@
             android:layout_marginLeft="40dp"
             android:layout_marginTop="5dp"
             android:text="Make sure your photos, age and bio are true\nto who you are"
-            android:textColor="@color/dark_grey"
+            android:textColor="?attr/textAppearanceBody2"
             android:textSize="14sp"
             />
 
@@ -67,7 +68,7 @@
             android:layout_height="wrap_content"
             android:text="Stay safe."
             android:gravity="left"
-            android:textColor="@color/my_green"
+            android:textColor="?attr/colorOnPrimary"
             android:textStyle="bold"
             android:layout_marginLeft="40dp"
             android:layout_marginTop="15dp"
@@ -80,7 +81,7 @@
             android:layout_marginLeft="40dp"
             android:layout_marginTop="5dp"
             android:text="Don't be too quick to give out personal\ninformation. Rent out safely."
-            android:textColor="@color/dark_grey"
+            android:textColor="?attr/textAppearanceBody2"
             android:textSize="14sp"
             />
 
@@ -89,7 +90,7 @@
             android:layout_height="wrap_content"
             android:text="Play it cool."
             android:gravity="left"
-            android:textColor="@color/my_green"
+            android:textColor="?attr/colorOnPrimary"
             android:textStyle="bold"
             android:layout_marginLeft="40dp"
             android:layout_marginTop="15dp"
@@ -102,7 +103,7 @@
             android:layout_marginLeft="40dp"
             android:layout_marginTop="5dp"
             android:text="Respect others and treat them as you would\nlike to be treated."
-            android:textColor="@color/dark_grey"
+            android:textColor="?attr/textAppearanceBody2"
             android:textSize="14sp"
             />
 
@@ -111,7 +112,7 @@
             android:layout_height="wrap_content"
             android:text="Be proactive."
             android:gravity="left"
-            android:textColor="@color/my_green"
+            android:textColor="?attr/colorOnPrimary"
             android:textStyle="bold"
             android:layout_marginLeft="40dp"
             android:layout_marginTop="15dp"
@@ -124,7 +125,7 @@
             android:layout_marginLeft="40dp"
             android:layout_marginTop="5dp"
             android:text="Always report bad behaviour."
-            android:textColor="@color/dark_grey"
+            android:textColor="?attr/textAppearanceBody2"
             android:textSize="14sp"
             />
 
@@ -136,7 +137,7 @@
             android:layout_marginTop="40dp"
             android:background="@drawable/enabled_button_background"
             android:text="I Agree"
-            android:textColor="@color/white"
+            android:textColor="?attr/textAppearanceButton"
             android:textSize="21sp"
             android:textAllCaps="false"
             />

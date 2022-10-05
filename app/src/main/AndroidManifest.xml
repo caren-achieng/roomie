@@ -38,30 +38,30 @@
         <activity
             android:name=".VerifyEmailActivity"
             android:exported="false"
-            android:screenOrientation="fullSensor"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.Transparent"
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".VerifyOTPActivity"
             android:exported="false"
-            android:screenOrientation="fullSensor"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.Transparent"
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".SendOTPActivity"
             android:exported="false"
-            android:screenOrientation="fullSensor"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.Transparent"
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".LoginActivity"
             android:exported="true"
             android:label="LoginPage"
-            android:theme="@style/Theme.Transparent" />
+            android:theme="@style/Theme.Login" />
         <activity
             android:name=".SplashScreenActivity"
             android:exported="true"
-            android:theme="@style/Theme.Transparent">
+            android:theme="@style/Theme.Login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

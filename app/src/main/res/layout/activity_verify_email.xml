@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:overScrollMode="never"
     android:scrollbars="none"
+    android:background="?attr/colorPrimary"
     android:fitsSystemWindows="true"
     tools:context=".VerifyEmailActivity">
 
@@ -21,7 +22,7 @@
             android:layout_marginTop="60dp"
             android:layout_marginStart="40dp"
             android:text="@string/what_is_your_email"
-            android:textColor="@color/black"
+            android:textColor="?attr/textAppearanceHeadline1"
             android:textSize="33sp"
             android:textStyle="bold"/>
 
@@ -31,7 +32,7 @@
             android:gravity="start"
             android:padding="50dp"
             android:text="@string/don_t_lose_access_to_your_account_verify_your_email"
-            android:textColor="@color/dark_grey"
+            android:textColor="?attr/textAppearanceBody2"
             android:textSize="16sp"
             android:layout_marginTop="-40dp"
             android:layout_marginStart="-5dp"
@@ -48,6 +49,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:hint="@string/enter_email"
+                android:textColorHint="?attr/textAppearanceBody2"
                 >
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -66,7 +68,7 @@
             android:layout_marginTop="60dp"
             android:background="@drawable/disabled_button_background"
             android:text="@string/continue_txt"
-            android:textColor="@color/white"
+            android:textColor="?attr/textAppearanceButton"
             android:textSize="21sp"
             />
 
