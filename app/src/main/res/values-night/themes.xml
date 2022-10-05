@@ -13,4 +13,26 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="Theme.Transparent" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/dark</item>
+        <item name="colorPrimaryVariant">@color/dark</item>
+        <item name="colorOnPrimary">@color/my_green</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/my_green</item>
+        <item name="colorSecondaryVariant">@color/my_green</item>
+        <item name="colorOnSecondary">@color/my_green</item>
+        <item name="textAppearanceBody1">@color/white</item>
+        <item name="textAppearanceBody2">@color/light_grey</item>
+        <item name="textAppearanceButton">@color/white</item>
+        <item name="textAppearanceHeadline1">@color/white</item>
+
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <!--        <item name="android:statusBarColor">@android:color/transparent</item>-->
+    </style>
+
+
 </resources>

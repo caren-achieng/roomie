@@ -7,9 +7,14 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="dark">#121212</color>
     <color name="my_green">#3d7254</color>
     <color name="light_grey">#959896</color>
     <color name="dark_grey">#535353</color>
+    <color name="text_white">@color/white</color>
+    <color name="text_black">@color/black</color>
+    <color name="text_dark_grey">@color/dark_grey</color>
+    <color name="text_light_grey">@color/light_grey</color>
     <color name="disabled_button">#CCCCCC</color>
     <color name="transparent">#00ffffff</color>
 

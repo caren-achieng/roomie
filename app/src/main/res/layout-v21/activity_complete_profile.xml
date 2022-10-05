@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?attr/colorPrimary"
     android:overScrollMode="never"
     android:scrollbars="none"
     android:fitsSystemWindows="true"
@@ -20,7 +21,7 @@
             android:layout_marginTop="60dp"
             android:layout_marginLeft="40dp"
             android:text="@string/complete_your_profile"
-            android:textColor="@color/black"
+            android:textColor="?attr/textAppearanceHeadline1"
             android:textSize="33sp"
             android:textStyle="bold"/>
 
@@ -29,7 +30,7 @@
             android:layout_height="wrap_content"
             android:gravity="start"
             android:text="@string/personal_information"
-            android:textColor="@color/black"
+            android:textColor="?attr/textAppearanceBody1"
             android:textSize="19sp"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
@@ -66,7 +67,7 @@
             android:layout_marginLeft="40dp"
             android:layout_marginTop="15dp"
             android:text="@string/this_is_how_it_will_appear_in_roomie_and_you_n_will_not_be_able_to_change_it"
-            android:textColor="@color/black"
+            android:textColor="?attr/textAppearanceBody1"
             android:textSize="14sp"
             />
 
@@ -102,7 +103,7 @@
             android:layout_marginLeft="40dp"
             android:layout_marginTop="5dp"
             android:text="@string/this_is_how_it_will_appear_in_roomie_and_you_n_will_not_be_able_to_change_it"
-            android:textColor="@color/black"
+            android:textColor="?attr/textAppearanceBody1"
             android:textSize="14sp"
             />
 
@@ -118,7 +119,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/birth_date"
-                android:textColor="@color/black"
+                android:textColor="?attr/textAppearanceBody1"
                 android:textSize="17sp"
                 />
 
@@ -138,7 +139,7 @@
             android:layout_marginLeft="40dp"
             android:layout_marginTop="5dp"
             android:text="@string/your_age_will_be_public"
-            android:textColor="@color/black"
+            android:textColor="?attr/textAppearanceBody1"
             android:textSize="14sp"
             />
 
@@ -149,7 +150,7 @@
             android:layout_marginTop="20dp"
             android:background="@color/transparent"
             android:text="@string/gender"
-            android:textColor="@color/black"
+            android:textColor="?attr/textAppearanceBody1"
             android:textSize="17sp"
             />
 
@@ -167,14 +168,14 @@
                 android:layout_marginRight="150dp"
                 android:onClick="onRadioButtonClicked"
                 android:text="@string/male"
-                android:textColor="@color/black"
+                android:textColor="?attr/textAppearanceBody1"
                 tools:ignore="OnClick" />
             <RadioButton
                 android:id="@+id/radio_female"
                 android:layout_width="wrap_content"
                 android:layout_height="48dp"
                 android:text="@string/female"
-                android:textColor="@color/black"
+                android:textColor="?attr/textAppearanceBody1"
                 android:onClick="onRadioButtonClicked"
                 tools:ignore="OnClick" />
         </RadioGroup>

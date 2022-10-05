@@ -38,19 +38,19 @@
         <activity
             android:name=".VerifyEmailActivity"
             android:exported="false"
-            android:screenOrientation="fullSensor"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.Transparent"
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".VerifyOTPActivity"
             android:exported="false"
-            android:screenOrientation="fullSensor"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.Transparent"
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".SendOTPActivity"
             android:exported="false"
-            android:screenOrientation="fullSensor"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.Transparent"
             android:windowSoftInputMode="adjustResize" />
         <activity
