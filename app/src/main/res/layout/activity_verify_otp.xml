@@ -12,13 +12,12 @@
     <LinearLayout
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_margin="30dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
-            android:layout_marginStart="40dp"
             android:text="@string/verification_code"
             android:textColor="?attr/textAppearanceHeadline1"
             android:textSize="35sp"
@@ -27,7 +26,6 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="40dp"
                 android:text="@string/enter_verification_code_sent_to"
                 android:textColor="?attr/textAppearanceBody2"
                 android:textSize="16sp" />
@@ -37,8 +35,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:layout_marginStart="40dp"
-                android:layout_marginEnd="60dp"
                 android:textColor="?attr/textAppearanceBody2"
                 android:textStyle="bold"
                 android:textSize="25sp"
@@ -185,8 +181,8 @@
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="40dp"
-                android:layout_marginBottom="50dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginBottom="70dp"
                 android:background="@drawable/disabled_button_background"
                 android:text="@string/continue_txt"
                 android:textColor="@color/white"
