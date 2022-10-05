@@ -16,28 +16,32 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:layout_marginLeft="40dp"
+            android:layout_marginLeft="30dp"
             android:text="@string/complete_your_profile"
             android:textColor="?attr/textAppearanceHeadline1"
-            android:textSize="33sp"
+            android:textSize="27sp"
             android:textStyle="bold"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="start"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="30dp"
             android:text="@string/personal_information"
             android:textColor="?attr/textAppearanceBody1"
             android:textSize="19sp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:layout_marginLeft="40dp"
             android:textStyle="bold" />
 
         <LinearLayout
             android:layout_height="wrap_content"
-            android:layout_width="300dp"
-            android:layout_marginStart="40dp"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp">
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="350dp"
             android:orientation="horizontal">
 
             <com.google.android.material.textfield.TextInputLayout
@@ -61,7 +65,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="left"
-            android:layout_marginLeft="40dp"
             android:layout_marginTop="5dp"
             android:text="@string/this_is_how_it_will_appear_in_roomie_and_you_n_will_not_be_able_to_change_it"
             android:textSize="13sp"
@@ -71,8 +74,7 @@
 
         <LinearLayout
             android:layout_height="wrap_content"
-            android:layout_width="300dp"
-            android:layout_marginStart="40dp"
+            android:layout_width="350dp"
             android:layout_marginTop="15dp"
             android:orientation="horizontal">
 
@@ -98,18 +100,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="left"
-            android:layout_marginLeft="40dp"
             android:layout_marginTop="5dp"
             android:text="@string/this_is_how_it_will_appear_in_roomie_and_you_n_will_not_be_able_to_change_it"
             android:textColor="?attr/textAppearanceBody1"
             android:textSize="14sp"
+            android:textStyle="bold"
             />
 
 
         <LinearLayout
             android:layout_height="wrap_content"
             android:layout_width="300dp"
-            android:layout_marginStart="40dp"
             android:layout_marginTop="15dp"
             android:orientation="vertical">
 
@@ -117,7 +118,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/birth_date"
-                android:textColor="?attr/textAppearanceBody1"
+                android:textColor="@color/light_grey"
                 android:textSize="17sp"
                 />
 
@@ -133,22 +134,20 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="left"
-            android:layout_marginLeft="40dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="2dp"
             android:text="@string/your_age_will_be_public"
             android:textColor="?attr/textAppearanceBody1"
             android:textSize="14sp"
+            android:textStyle="bold"
             />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
             android:layout_marginTop="20dp"
             android:background="@color/transparent"
             android:text="@string/gender"
-            android:textColor="?attr/textAppearanceBody1"
+            android:textColor="@color/light_grey"
             android:textSize="17sp"
             />
 
@@ -156,14 +155,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginLeft="40dp"
             android:layout_marginTop="5dp">
 
             <RadioButton
                 android:id="@+id/radio_male"
                 android:layout_width="wrap_content"
                 android:layout_height="48dp"
-                android:layout_marginRight="150dp"
+                android:layout_marginRight="130dp"
                 android:onClick="onRadioButtonClicked"
                 android:text="@string/male"
                 android:textColor="?attr/textAppearanceBody1"
@@ -177,18 +175,19 @@
                 android:onClick="onRadioButtonClicked"
                 tools:ignore="OnClick" />
         </RadioGroup>
+        </LinearLayout>
 
         <Button
-            android:id="@+id/VerifyEmail"
+            android:id="@+id/continueProfile"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="150dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/disabled_button_background"
             android:text="@string/continue_txt"
             android:textColor="@color/white"
             android:textSize="21sp"
-            />
+            android:layout_marginBottom="60dp"/>
 
     </LinearLayout>
 </ScrollView>
