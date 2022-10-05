@@ -13,14 +13,13 @@
     <LinearLayout
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_margin="30dp">
 
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
-            android:layout_marginStart="40dp"
             android:text="@string/what_is_your_email"
             android:textColor="?attr/textAppearanceHeadline1"
             android:textSize="33sp"
@@ -29,13 +28,9 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="start"
-            android:padding="50dp"
             android:text="@string/don_t_lose_access_to_your_account_verify_your_email"
             android:textColor="?attr/textAppearanceBody2"
             android:textSize="16sp"
-            android:layout_marginTop="-40dp"
-            android:layout_marginStart="-5dp"
             />
 
         <LinearLayout
@@ -66,6 +61,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="60dp"
+            android:layout_marginBottom="40dp"
+
             android:background="@drawable/disabled_button_background"
             android:text="@string/continue_txt"
             android:textColor="?attr/textAppearanceButton"
