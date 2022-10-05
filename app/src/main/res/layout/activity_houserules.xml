@@ -11,14 +11,15 @@
 
     <LinearLayout
         android:layout_height="wrap_content"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="30dp">
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp">
 
         <ImageView
             android:layout_width="150dp"
-            android:layout_height="150dp"
             android:layout_marginTop="-25dp"
+            android:layout_height="150dp"
             android:layout_gravity="center_horizontal"
             android:src="@drawable/roomie_green"
             />
@@ -45,20 +46,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Be yourself."
-            android:gravity="left"
             android:textColor="?attr/colorOnPrimary"
             android:textStyle="bold"
-            android:layout_marginLeft="40dp"
             android:layout_marginTop="40dp"
             android:textSize="20sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="left"
-            android:layout_marginLeft="40dp"
             android:layout_marginTop="5dp"
-            android:text="Make sure your photos, age and bio are true\nto who you are"
+            android:text="Make sure your photos, age and bio are true to who you are"
             android:textColor="?attr/textAppearanceBody2"
             android:textSize="14sp"
             />
@@ -67,20 +64,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Stay safe."
-            android:gravity="left"
             android:textColor="?attr/colorOnPrimary"
             android:textStyle="bold"
-            android:layout_marginLeft="40dp"
             android:layout_marginTop="15dp"
             android:textSize="20sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="left"
-            android:layout_marginLeft="40dp"
             android:layout_marginTop="5dp"
-            android:text="Don't be too quick to give out personal\ninformation. Rent out safely."
+            android:text="Don't be too quick to give out personal information. Rent out safely."
             android:textColor="?attr/textAppearanceBody2"
             android:textSize="14sp"
             />
@@ -89,20 +82,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Play it cool."
-            android:gravity="left"
             android:textColor="?attr/colorOnPrimary"
             android:textStyle="bold"
-            android:layout_marginLeft="40dp"
             android:layout_marginTop="15dp"
             android:textSize="20sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="left"
-            android:layout_marginLeft="40dp"
             android:layout_marginTop="5dp"
-            android:text="Respect others and treat them as you would\nlike to be treated."
+            android:text="Respect others and treat them as you would like to be treated."
             android:textColor="?attr/textAppearanceBody2"
             android:textSize="14sp"
             />
@@ -111,18 +100,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Be proactive."
-            android:gravity="left"
             android:textColor="?attr/colorOnPrimary"
             android:textStyle="bold"
-            android:layout_marginLeft="40dp"
             android:layout_marginTop="15dp"
             android:textSize="20sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="left"
-            android:layout_marginLeft="40dp"
             android:layout_marginTop="5dp"
             android:text="Always report bad behaviour."
             android:textColor="?attr/textAppearanceBody2"
