@@ -5,12 +5,15 @@ import android.os.Bundle
 import android.view.View
 import android.widget.DatePicker
 import android.widget.RadioButton
+import androidx.appcompat.app.AppCompatDelegate
 
 
 class CompleteProfileActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_complete_profile)
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+
         var datepicker = findViewById<DatePicker>(R.id.birthday)
         datepicker.calendarViewShown = false
     }
