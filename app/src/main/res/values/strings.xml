@@ -27,4 +27,6 @@
     <string name="your_age_will_be_public">Your age will be public.</string>
     <string name="gender">Gender</string>
     <string name="birth_date">Birth Date</string>
+    <string name="profile_picture">Profile Picture</string>
+    <string name="change_profile_picture">Change profile picture</string>
 </resources>
