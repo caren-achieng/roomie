@@ -1,53 +1,305 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:grid="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:overScrollMode="never"
     android:scrollbars="none"
     android:fitsSystemWindows="true"
-    tools:context=".CompleteProfileActivity">
+    tools:context=".CompleteProfileActivity"
+    android:orientation="vertical">
 
-    <GridLayout
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        android:text="@string/complete_your_profile"
+        android:textColor="?attr/textAppearanceHeadline1"
+        android:textSize="27sp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:text="Let everyone know who you are by adding \nit to your profile"
+        android:textColor="?attr/textAppearanceBody2"
+        android:textSize="19sp" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:layout_marginTop="10dp"
+        android:id="@+id/chipGroup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        grid:alignmentMode="alignBounds"
-        grid:columnCount="3"
-        grid:useDefaultMargins="true">
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+
+        android:paddingEnd="20dp"
+        app:chipSpacingHorizontal="10dp"
+        app:chipSpacingVertical="5dp"
+
         >
 
         <com.google.android.material.chip.Chip
-            android:id="@+id/chip"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Something"/>
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chip"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Something"/>
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chip"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Something"/>
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chip"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Something"/>
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chip"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Something"/>
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chip"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Something"/>
+            android:text="Student"
+            app:chipCornerRadius="50dp"
+            app:chipMinHeight="40dp"
+            app:chipStartPadding="10dp"
+            app:chipEndPadding="10dp"
+            app:chipBackgroundColor="@color/bg_chip_state_list"
+            app:chipSurfaceColor="@color/transparent"
+            android:textColor="?attr/colorPrimary"
+            style="@style/Widget.Material3.Chip.Filter"
+            />
 
-    </GridLayout>
-</ScrollView>
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Early Bird"
+            app:chipCornerRadius="50dp"
+            app:chipMinHeight="40dp"
+            app:chipStartPadding="10dp"
+            app:chipEndPadding="10dp"
+            app:chipBackgroundColor="@color/bg_chip_state_list"
+            app:chipSurfaceColor="@color/transparent"
+            android:textColor="?attr/colorPrimary"
+            style="@style/Widget.Material3.Chip.Filter"
+            />
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Night Owl"
+            app:chipCornerRadius="50dp"
+            app:chipMinHeight="40dp"
+            app:chipStartPadding="10dp"
+            app:chipEndPadding="10dp"
+            app:chipBackgroundColor="@color/bg_chip_state_list"
+            app:chipSurfaceColor="@color/transparent"
+            android:textColor="?attr/colorPrimary"
+            style="@style/Widget.Material3.Chip.Filter"/>
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sports"
+            app:chipCornerRadius="50dp"
+            app:chipMinHeight="40dp"
+            app:chipStartPadding="10dp"
+            app:chipEndPadding="10dp"
+            app:chipBackgroundColor="@color/bg_chip_state_list"
+            app:chipSurfaceColor="@color/transparent"
+            android:textColor="?attr/colorPrimary"
+            style="@style/Widget.Material3.Chip.Filter"/>
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gym Rat"
+            app:chipCornerRadius="50dp"
+            app:chipMinHeight="40dp"
+            app:chipStartPadding="10dp"
+            app:chipEndPadding="10dp"
+            app:chipBackgroundColor="@color/bg_chip_state_list"
+            app:chipSurfaceColor="@color/transparent"
+            android:textColor="?attr/colorPrimary"
+            style="@style/Widget.Material3.Chip.Filter"/>
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pets"
+            app:chipCornerRadius="50dp"
+            app:chipEndPadding="10dp"
+            app:chipMinHeight="40dp"
+            app:chipStartPadding="10dp"
+            app:chipBackgroundColor="@color/bg_chip_state_list"
+            app:chipSurfaceColor="@color/transparent"
+            android:textColor="?attr/colorPrimary"
+            style="@style/Widget.Material3.Chip.Filter"/>
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Full-time worker"
+            app:chipCornerRadius="50dp"
+            app:chipMinHeight="40dp"
+            app:chipStartPadding="10dp"
+            app:chipEndPadding="10dp"
+            app:chipBackgroundColor="@color/bg_chip_state_list"
+            app:chipSurfaceColor="@color/transparent"
+            android:textColor="?attr/colorPrimary"
+            style="@style/Widget.Material3.Chip.Filter"/>
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Going out"
+            app:chipCornerRadius="50dp"
+            app:chipMinHeight="40dp"
+            app:chipStartPadding="10dp"
+            app:chipEndPadding="10dp"
+            app:chipBackgroundColor="@color/bg_chip_state_list"
+            app:chipSurfaceColor="@color/transparent"
+            android:textColor="?attr/colorPrimary"
+            style="@style/Widget.Material3.Chip.Filter"/>
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gamer"
+            app:chipCornerRadius="50dp"
+            app:chipMinHeight="40dp"
+            app:chipStartPadding="10dp"
+            app:chipEndPadding="10dp"
+            app:chipBackgroundColor="@color/bg_chip_state_list"
+            app:chipSurfaceColor="@color/transparent"
+            android:textColor="?attr/colorPrimary"
+            style="@style/Widget.Material3.Chip.Filter"/>
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clean"
+            app:chipCornerRadius="50dp"
+            app:chipMinHeight="40dp"
+            app:chipStartPadding="10dp"
+            app:chipEndPadding="10dp"
+            app:chipBackgroundColor="@color/bg_chip_state_list"
+            app:chipSurfaceColor="@color/transparent"
+            android:textColor="?attr/colorPrimary"
+            style="@style/Widget.Material3.Chip.Filter"/>
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Organized"
+            app:chipCornerRadius="50dp"
+            app:chipMinHeight="40dp"
+            app:chipStartPadding="10dp"
+            app:chipEndPadding="10dp"
+            app:chipBackgroundColor="@color/bg_chip_state_list"
+            app:chipSurfaceColor="@color/transparent"
+            android:textColor="?attr/colorPrimary"
+            style="@style/Widget.Material3.Chip.Filter"/>
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Handyman"
+            app:chipCornerRadius="50dp"
+            app:chipMinHeight="40dp"
+            app:chipStartPadding="10dp"
+            app:chipEndPadding="10dp"
+            app:chipBackgroundColor="@color/bg_chip_state_list"
+            app:chipSurfaceColor="@color/transparent"
+            android:textColor="?attr/colorPrimary"
+            style="@style/Widget.Material3.Chip.Filter"/>
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Non-smoke"
+            app:chipCornerRadius="50dp"
+            app:chipMinHeight="40dp"
+            app:chipStartPadding="10dp"
+            app:chipEndPadding="10dp"
+            app:chipBackgroundColor="@color/bg_chip_state_list"
+            app:chipSurfaceColor="@color/transparent"
+            android:textColor="?attr/colorPrimary"
+            style="@style/Widget.Material3.Chip.Filter"/>
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Foodie"
+            app:chipCornerRadius="50dp"
+            app:chipMinHeight="40dp"
+            app:chipStartPadding="10dp"
+            app:chipEndPadding="10dp"
+            app:chipBackgroundColor="@color/bg_chip_state_list"
+            app:chipSurfaceColor="@color/transparent"
+            android:textColor="?attr/colorPrimary"
+            style="@style/Widget.Material3.Chip.Filter"/>
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Musician"
+            app:chipCornerRadius="50dp"
+            app:chipMinHeight="40dp"
+            app:chipStartPadding="10dp"
+            app:chipEndPadding="10dp"
+            app:chipBackgroundColor="@color/bg_chip_state_list"
+            app:chipSurfaceColor="@color/transparent"
+            android:textColor="?attr/colorPrimary"
+            style="@style/Widget.Material3.Chip.Filter"/>
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Creative"
+            app:chipCornerRadius="50dp"
+            app:chipMinHeight="40dp"
+            app:chipStartPadding="10dp"
+            app:chipEndPadding="10dp"
+            app:chipBackgroundColor="@color/bg_chip_state_list"
+            app:chipSurfaceColor="@color/transparent"
+            android:textColor="?attr/colorPrimary"
+            style="@style/Widget.Material3.Chip.Filter"/>
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Introvert"
+            app:chipCornerRadius="50dp"
+            app:chipMinHeight="40dp"
+            app:chipStartPadding="10dp"
+            app:chipEndPadding="10dp"
+            app:chipBackgroundColor="@color/bg_chip_state_list"
+            app:chipSurfaceColor="@color/transparent"
+            android:textColor="?attr/colorPrimary"
+            style="@style/Widget.Material3.Chip.Filter"/>
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Extrovert"
+            app:chipCornerRadius="50dp"
+            app:chipMinHeight="40dp"
+            app:chipStartPadding="10dp"
+            app:chipEndPadding="10dp"
+            app:chipBackgroundColor="@color/bg_chip_state_list"
+            app:chipSurfaceColor="@color/transparent"
+            android:textColor="?attr/colorPrimary"
+            style="@style/Widget.Material3.Chip.Filter"/>
+
+
+    </com.google.android.material.chip.ChipGroup>
+
+    <Button
+        android:layout_marginTop="30dp"
+        android:id="@+id/continueButton"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/disabled_button_background"
+        android:text="@string/continue_txt"
+        android:textColor="@color/white"
+        android:textSize="21sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chipGroup" />
+
+
+
+
+</LinearLayout>
