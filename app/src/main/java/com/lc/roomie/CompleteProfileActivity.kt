@@ -8,6 +8,7 @@ import android.widget.DatePicker
 import android.widget.RadioButton
 import kotlinx.android.synthetic.main.activity_complete_profile.*
 import kotlinx.android.synthetic.main.activity_houserules.*
+import androidx.appcompat.app.AppCompatDelegate
 
 
 class CompleteProfileActivity : AppCompatActivity() {
@@ -19,6 +20,8 @@ class CompleteProfileActivity : AppCompatActivity() {
             val intent = Intent(this, PersonalityActivity::class.java)
             startActivity(intent)
         }
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+
 
         var datepicker = findViewById<DatePicker>(R.id.birthday)
         datepicker.calendarViewShown = false
@@ -26,22 +29,3 @@ class CompleteProfileActivity : AppCompatActivity() {
 
     fun onRadioButtonClicked(view: View) {}
 }
-
-//fun onRadioButtonClicked(view: View) {
-//    if (view is RadioButton) {
-//        // Is the button now checked?
-//        val checked = view.isChecked
-//
-//        // Check which radio button was clicked
-//        when (view.getId()) {
-//            R.id.radio_male ->
-//                if (checked) {
-//                    // Pirates are the best
-//                }
-//            R.id.radio_female ->
-//                if (checked) {
-//                    // Ninjas rule
-//                }
-//        }
-//    }
-//}
