@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:layout_marginLeft="30dp"
-        android:text="@string/complete_your_profile"
+        android:text="@string/this_is_me"
         android:textColor="?attr/textAppearanceHeadline1"
         android:textSize="27sp"
         android:textStyle="bold"
@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="10dp"
-        android:text="Let everyone know who you are by adding \nit to your profile"
+        android:text="@string/personality_string"
         android:textColor="?attr/textAppearanceBody2"
         android:textSize="19sp" />
 
@@ -38,8 +38,6 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
-
-        android:paddingEnd="20dp"
         app:chipSpacingHorizontal="10dp"
         app:chipSpacingVertical="5dp"
 
@@ -48,7 +46,7 @@
         <com.google.android.material.chip.Chip
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Student"
+            android:text="@string/student"
             app:chipCornerRadius="50dp"
             app:chipMinHeight="40dp"
             app:chipStartPadding="10dp"
@@ -62,7 +60,7 @@
         <com.google.android.material.chip.Chip
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Early Bird"
+            android:text="@string/early_bird"
             app:chipCornerRadius="50dp"
             app:chipMinHeight="40dp"
             app:chipStartPadding="10dp"
@@ -76,7 +74,7 @@
         <com.google.android.material.chip.Chip
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Night Owl"
+            android:text="@string/night_owl"
             app:chipCornerRadius="50dp"
             app:chipMinHeight="40dp"
             app:chipStartPadding="10dp"
@@ -89,7 +87,7 @@
         <com.google.android.material.chip.Chip
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sports"
+            android:text="@string/sports"
             app:chipCornerRadius="50dp"
             app:chipMinHeight="40dp"
             app:chipStartPadding="10dp"
@@ -102,7 +100,7 @@
         <com.google.android.material.chip.Chip
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Gym Rat"
+            android:text="@string/gym_rat"
             app:chipCornerRadius="50dp"
             app:chipMinHeight="40dp"
             app:chipStartPadding="10dp"
@@ -115,7 +113,7 @@
         <com.google.android.material.chip.Chip
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Pets"
+            android:text="@string/pets"
             app:chipCornerRadius="50dp"
             app:chipEndPadding="10dp"
             app:chipMinHeight="40dp"
@@ -128,7 +126,7 @@
         <com.google.android.material.chip.Chip
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Full-time worker"
+            android:text="@string/full_time_worker"
             app:chipCornerRadius="50dp"
             app:chipMinHeight="40dp"
             app:chipStartPadding="10dp"
@@ -141,7 +139,7 @@
         <com.google.android.material.chip.Chip
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Going out"
+            android:text="@string/going_out"
             app:chipCornerRadius="50dp"
             app:chipMinHeight="40dp"
             app:chipStartPadding="10dp"
@@ -154,7 +152,7 @@
         <com.google.android.material.chip.Chip
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Gamer"
+            android:text="@string/gamer"
             app:chipCornerRadius="50dp"
             app:chipMinHeight="40dp"
             app:chipStartPadding="10dp"
@@ -167,7 +165,7 @@
         <com.google.android.material.chip.Chip
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Clean"
+            android:text="@string/clean"
             app:chipCornerRadius="50dp"
             app:chipMinHeight="40dp"
             app:chipStartPadding="10dp"
@@ -180,7 +178,7 @@
         <com.google.android.material.chip.Chip
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Organized"
+            android:text="@string/organized"
             app:chipCornerRadius="50dp"
             app:chipMinHeight="40dp"
             app:chipStartPadding="10dp"
@@ -193,7 +191,7 @@
         <com.google.android.material.chip.Chip
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Handyman"
+            android:text="@string/handyman"
             app:chipCornerRadius="50dp"
             app:chipMinHeight="40dp"
             app:chipStartPadding="10dp"
@@ -206,7 +204,7 @@
         <com.google.android.material.chip.Chip
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Non-smoke"
+            android:text="@string/non_smoker"
             app:chipCornerRadius="50dp"
             app:chipMinHeight="40dp"
             app:chipStartPadding="10dp"
@@ -219,7 +217,7 @@
         <com.google.android.material.chip.Chip
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Foodie"
+            android:text="@string/foodie"
             app:chipCornerRadius="50dp"
             app:chipMinHeight="40dp"
             app:chipStartPadding="10dp"
@@ -232,7 +230,7 @@
         <com.google.android.material.chip.Chip
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Musician"
+            android:text="@string/musician"
             app:chipCornerRadius="50dp"
             app:chipMinHeight="40dp"
             app:chipStartPadding="10dp"
@@ -245,7 +243,7 @@
         <com.google.android.material.chip.Chip
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Creative"
+            android:text="@string/creative"
             app:chipCornerRadius="50dp"
             app:chipMinHeight="40dp"
             app:chipStartPadding="10dp"
@@ -258,7 +256,7 @@
         <com.google.android.material.chip.Chip
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Introvert"
+            android:text="@string/introvert"
             app:chipCornerRadius="50dp"
             app:chipMinHeight="40dp"
             app:chipStartPadding="10dp"
@@ -271,7 +269,7 @@
         <com.google.android.material.chip.Chip
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Extrovert"
+            android:text="@string/extrovert"
             app:chipCornerRadius="50dp"
             app:chipMinHeight="40dp"
             app:chipStartPadding="10dp"

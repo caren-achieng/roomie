@@ -29,4 +29,24 @@
     <string name="birth_date">Birth Date</string>
     <string name="profile_picture">Profile Picture</string>
     <string name="change_profile_picture">Change profile picture</string>
+    <string name="this_is_me">This is me</string>
+    <string name="personality_string">Let everyone know who you are by adding \nit to your profile</string>
+    <string name="student">Student</string>
+    <string name="early_bird">Early Bird</string>
+    <string name="night_owl">Night Owl</string>
+    <string name="sports">Sports</string>
+    <string name="gym_rat">Gym Rat</string>
+    <string name="pets">Pets</string>
+    <string name="full_time_worker">Full-time worker</string>
+    <string name="going_out">Going out</string>
+    <string name="gamer">Gamer</string>
+    <string name="clean">Clean</string>
+    <string name="organized">Organized</string>
+    <string name="handyman">Handyman</string>
+    <string name="non_smoker">Non-smoker</string>
+    <string name="foodie">Foodie</string>
+    <string name="musician">Musician</string>
+    <string name="creative">Creative</string>
+    <string name="introvert">Introvert</string>
+    <string name="extrovert">Extrovert</string>
 </resources>

@@ -132,7 +132,7 @@
 
         <LinearLayout
             android:layout_height="wrap_content"
-            android:layout_width="300dp"
+            android:layout_width="match_parent"
             android:layout_marginTop="15dp"
             android:orientation="vertical">
 
@@ -148,6 +148,7 @@
                 android:id="@+id/birthday"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+
                 android:calendarViewShown="false"
                 android:datePickerMode="spinner"
                 />
