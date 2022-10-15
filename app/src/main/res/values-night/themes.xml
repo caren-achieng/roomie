@@ -11,6 +11,7 @@
         <item name="textAppearanceHeadline1">@color/white</item>
         <item name="textAppearanceBody1">@color/white</item>
         <item name="textAppearanceBody2">@color/light_grey</item>
+        <item name="android:background">@color/dark</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
         <item name="colorSecondaryVariant">@color/teal_200</item>

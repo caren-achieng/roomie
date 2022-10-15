@@ -12,10 +12,11 @@ class HouserulesActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_houserules)
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
 
         Agree.setOnClickListener{
+            val reference = intent.getStringExtra("docRef")
             val intent = Intent(this, CompleteProfileActivity::class.java)
+            intent.putExtra("docRef", reference)
             startActivity(intent)
     }
     }

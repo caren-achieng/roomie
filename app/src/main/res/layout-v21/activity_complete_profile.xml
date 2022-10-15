@@ -40,6 +40,7 @@
             android:layout_marginLeft="30dp">
 
             <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/iv_profile"
                 android:layout_gravity="center"
                 android:layout_width="150dp"
                 android:scaleType="centerCrop"
@@ -67,12 +68,12 @@
             android:orientation="horizontal">
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/first_name"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:hint="@string/first_name">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/first_name"
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
                     />
@@ -102,13 +103,13 @@
 
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/last_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/last_name">
 
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/last_name"
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
                     />
@@ -175,6 +176,7 @@
             />
 
         <RadioGroup
+            android:id="@+id/radioGenders"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -206,7 +208,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
-            android:background="@drawable/disabled_button_background"
+            android:background="@drawable/enabled_button_background"
             android:text="@string/continue_txt"
             android:textColor="@color/white"
             android:textSize="21sp"

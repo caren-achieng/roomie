@@ -45,7 +45,6 @@ class SendOTPActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_send_otp)
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
 
         val progressBar: ProgressBar = findViewById(R.id.progressBar)
         val phoneNumber: EditText = findViewById(R.id.inputMobile)

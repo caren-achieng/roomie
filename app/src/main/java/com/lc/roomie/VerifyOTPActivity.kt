@@ -40,7 +40,6 @@ class VerifyOTPActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_verify_otp)
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
 
 
         auth = Firebase.auth
@@ -193,6 +192,7 @@ class VerifyOTPActivity : AppCompatActivity() {
 
 
         VerifyButton.setOnClickListener(){
+            //Comment this out
 //            progressBar2.visibility = View.VISIBLE
 //            buttonVerify.visibility = View.GONE
 //            val code : String = inputCode1.getText().toString() + inputCode2.getText().toString() + inputCode3.getText().toString() + inputCode4.getText().toString() + inputCode5.getText().toString() + inputCode6.getText().toString()
