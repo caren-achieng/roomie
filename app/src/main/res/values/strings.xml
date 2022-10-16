@@ -49,4 +49,5 @@
     <string name="creative">Creative</string>
     <string name="introvert">Introvert</string>
     <string name="extrovert">Extrovert</string>
+    <string name="finish">FINISH</string>
 </resources>

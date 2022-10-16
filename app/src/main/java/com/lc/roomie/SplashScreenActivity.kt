@@ -6,6 +6,9 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.view.animation.AnimationUtils
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.auth.User
+import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_splash_screen.*
 
 class SplashScreenActivity : AppCompatActivity() {
@@ -19,12 +22,30 @@ class SplashScreenActivity : AppCompatActivity() {
         logo.startAnimation(animation)
 
         val splashScreenTimeOut = 4000
-        val homeIntent = Intent(this@SplashScreenActivity, LoginActivity::class.java)
+        val loginIntent = Intent(this@SplashScreenActivity, LoginActivity::class.java)
+
+        //CHANGE TO PAGE YOU WANT TO MAKE
+        val developIntent = Intent(this@SplashScreenActivity, PersonalityActivity::class.java)
+
+        val user = Firebase.auth.currentUser
+
+//        if (user != null){
+//            Handler(Looper.getMainLooper()).postDelayed({
+//                startActivity(homeIntent)
+//                finish()
+//            }, splashScreenTimeOut.toLong())
+//        } else {
+//            Handler(Looper.getMainLooper()).postDelayed({
+//                startActivity(loginIntent)
+//                finish()
+//            }, splashScreenTimeOut.toLong())
+//        }
+
+
 
         Handler(Looper.getMainLooper()).postDelayed({
-            startActivity(homeIntent)
+            startActivity(developIntent)
             finish()
-
         }, splashScreenTimeOut.toLong())
 
     }
