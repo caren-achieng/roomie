@@ -13,6 +13,9 @@ class HouserulesActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_houserules)
 
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+
+
         Agree.setOnClickListener{
             val reference = intent.getStringExtra("docRef")
             val intent = Intent(this, CompleteProfileActivity::class.java)

@@ -41,6 +41,7 @@ class VerifyOTPActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_verify_otp)
 
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
 
         auth = Firebase.auth
         //Initialize SMS listener

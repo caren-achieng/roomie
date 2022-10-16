@@ -21,6 +21,7 @@ import android.widget.RadioButton
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.google.android.material.textfield.TextInputEditText
@@ -110,6 +111,9 @@ class CompleteProfileActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_complete_profile)
 
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+
+
 
 
         birthday.calendarViewShown = false
@@ -118,6 +122,7 @@ class CompleteProfileActivity : AppCompatActivity() {
         birthday.setMaxDate(calendar.getTimeInMillis())
 
         val first_name = findViewById<TextInputEditText>(R.id.first_name)
+
         first_name.addTextChangedListener( object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {
                 val fname = first_name.text.toString()
@@ -181,7 +186,8 @@ class CompleteProfileActivity : AppCompatActivity() {
 //                return@setOnClickListener
 //            }
 //
-//            val data = hashMapOf<String, String>( "first_name" to first_name.text.toString(),
+//            val data = hashMapOf<String, String>(
+//                "first_name" to first_name.text.toString(),
 //                "last_name" to last_name.text.toString(),
 //                "birthday" to birthday.dayOfMonth.toString()+"/"+birthday.month.toString() +"/"+birthday.year.toString(),
 //                "gender" to findViewById<RadioButton>(radioGenders.checkedRadioButtonId).text.toString()
@@ -196,7 +202,6 @@ class CompleteProfileActivity : AppCompatActivity() {
 //            }.addOnFailureListener {
 //                Toast.makeText(this, "Profile update failed", Toast.LENGTH_SHORT).show()
 //                Log.d("TAG", "onCreate: ${it.message}")
-//                Log.d("TAG", "onCreate: ${intent.getStringExtra("docRef")}")
 //
 //            }
             val intent = Intent(this, PersonalityActivity::class.java)
@@ -210,10 +215,6 @@ class CompleteProfileActivity : AppCompatActivity() {
     fun onRadioButtonClicked(view: View) {}
 
     companion object{
-        private val IMAGE_PICK_CODE = 1000;
-
-        private val PERMISSION_CODE = 1001
-
         private const val TAG = "CompleteProfileActivity"
     }
 }

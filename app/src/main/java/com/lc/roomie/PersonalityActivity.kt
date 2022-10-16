@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View.generateViewId
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.graphics.toColor
 import com.google.android.material.chip.Chip
 import com.google.firebase.firestore.ktx.firestore
@@ -16,7 +17,7 @@ import kotlinx.android.synthetic.main.activity_personality.*
 
 class PersonalityActivity : AppCompatActivity() {
 
-    val personalities = arrayOf(
+    private val personalities = arrayOf(
         "Student",
         "Early Bird",
         "Night Owl",
@@ -38,8 +39,12 @@ class PersonalityActivity : AppCompatActivity() {
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_personality)
+
+
+
 
         val db = Firebase.firestore
 

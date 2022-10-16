@@ -30,7 +30,10 @@ class VerifyEmailActivity : AppCompatActivity() {
         val db = Firebase.firestore
         val verifyEmail = findViewById<Button>(R.id.VerifyEmail)
 
-        verifyEmail.isEnabled = false
+//        verifyEmail.isEnabled = false
+
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+
 
         email.addTextChangedListener(object : TextWatcher {
             @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
