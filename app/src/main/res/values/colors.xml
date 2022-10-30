@@ -11,10 +11,20 @@
     <color name="error">#B00020</color>
 
     <color name="my_green">#3d7254</color>
+    <color name="my_green_light">#6aa181</color>
+    <color name="my_green_dark">#0e462b</color>
+
     <color name="my_green_14">#243D7254</color>
     <color name="my_green_variant_14">#241A9869</color>
+
+
     <color name="my_green_variant">#1a9869</color>
+    <color name="my_green_variant_light">#58ca97</color>
+    <color name="my_green_variant_dark">#00693e</color>
+
+
     <color name="light_grey">#959896</color>
+    <color name="light_grey_50">#80959896</color>
     <color name="dark_grey">#535353</color>
     <color name="text_white">@color/white</color>
     <color name="text_black">@color/black</color>
@@ -22,7 +32,11 @@
     <color name="text_light_grey">@color/light_grey</color>
     <color name="disabled_button">#CCCCCC</color>
     <color name="transparent">#00ffffff</color>
-
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="light_blue_900">#FF01579B</color>
+    <color name="light_blue_A200">#FF40C4FF</color>
+    <color name="light_blue_A400">#FF00B0FF</color>
+    <color name="black_overlay">#66000000</color>
 
 
 </resources>

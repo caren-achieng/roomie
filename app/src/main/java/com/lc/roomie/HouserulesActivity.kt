@@ -17,9 +17,7 @@ class HouserulesActivity : AppCompatActivity() {
 
 
         Agree.setOnClickListener{
-            val reference = intent.getStringExtra("docRef")
             val intent = Intent(this, CompleteProfileActivity::class.java)
-            intent.putExtra("docRef", reference)
             startActivity(intent)
     }
     }

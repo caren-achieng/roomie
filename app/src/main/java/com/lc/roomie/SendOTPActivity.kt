@@ -132,24 +132,24 @@ class SendOTPActivity : AppCompatActivity() {
         }
         // [END phone_auth_callbacks]
         SendOTP.setOnClickListener() {
-//            progressBar.visibility = View.VISIBLE
-//            SendOtp.visibility = View.GONE
-//            val mobileNumber = phoneNumber.text.toString().trim()
-//            val pattern = "((?:(?:^(7|1)(?:(?:[01249][0-9])|(?:5[789])|(?:6[89])))|(?:1(?:[1][0-5])))[0-9]{6})\$".toRegex()
-//            if (!pattern.matches(mobileNumber)) {
-//                phoneNumber.error = "Enter a valid mobile"
-//                phoneNumber.requestFocus()
-//                progressBar.visibility = View.GONE
-//                SendOtp.visibility = View.VISIBLE
-//                SendOtp.isEnabled = false
-//                SendOTP.background = getDrawable(R.drawable.disabled_button_background)
-//                return@setOnClickListener
-//            }
-//            startPhoneNumberVerification(mobileNumber)
-            val intent = Intent(this@SendOTPActivity, VerifyOTPActivity::class.java)
-            intent.putExtra("phoneNumber", phoneNumber.text.toString())
-            startActivity(intent)
-            finish()
+            progressBar.visibility = View.VISIBLE
+            SendOtp.visibility = View.GONE
+            val mobileNumber = phoneNumber.text.toString().trim()
+            val pattern = "((?:(?:^(7|1)(?:(?:[01249][0-9])|(?:5[789])|(?:6[89])))|(?:1(?:[1][0-5])))[0-9]{6})\$".toRegex()
+            if (!pattern.matches(mobileNumber)) {
+                phoneNumber.error = "Enter a valid mobile"
+                phoneNumber.requestFocus()
+                progressBar.visibility = View.GONE
+                SendOtp.visibility = View.VISIBLE
+                SendOtp.isEnabled = false
+                SendOTP.background = getDrawable(R.drawable.disabled_button_background)
+                return@setOnClickListener
+            }
+            startPhoneNumberVerification(mobileNumber)
+//            val intent = Intent(this@SendOTPActivity, VerifyOTPActivity::class.java)
+//            intent.putExtra("phoneNumber", phoneNumber.text.toString())
+//            startActivity(intent)
+//            finish()
 
         }
     }

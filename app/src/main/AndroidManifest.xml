@@ -18,10 +18,18 @@
         android:theme="@style/Theme.Roomie"
         tools:targetApi="31">
         <activity
+            android:name=".AddListingActivity"
+            android:exported="false"
+            android:label="@string/title_activity_add_listing"
+            android:theme="@style/Theme.Roomie">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".PersonalityActivity"
             android:exported="false"
-            android:theme="@style/Theme.Roomie"
-            >
+            android:theme="@style/Theme.Roomie">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -79,7 +87,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".LandlordMainActivity"
             android:label="SplashScreen"
             android:theme="@style/Theme.Roomie" />
     </application>

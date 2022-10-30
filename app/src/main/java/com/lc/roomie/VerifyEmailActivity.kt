@@ -16,6 +16,7 @@ import androidx.appcompat.app.AppCompatDelegate
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 import com.google.api.DistributionOrBuilder
+import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_verify_email.*
@@ -29,6 +30,7 @@ class VerifyEmailActivity : AppCompatActivity() {
         val email = findViewById<TextInputEditText>(R.id.inputEmail)
         val db = Firebase.firestore
         val verifyEmail = findViewById<Button>(R.id.VerifyEmail)
+        val user = Firebase.auth.currentUser
 
 //        verifyEmail.isEnabled = false
 
@@ -57,21 +59,18 @@ class VerifyEmailActivity : AppCompatActivity() {
         })
 
         VerifyEmail.setOnClickListener{
-//            db.collection("users").document("${intent.getStringExtra("docRef")}").update("email", email.text.toString()).addOnSuccessListener {
-//                Toast.makeText(this, "Email updated successfully", Toast.LENGTH_SHORT).show()
-//                val reference = intent.getStringExtra("docRef")
-//                val intent = Intent(this, HouserulesActivity::class.java)
-//                intent.putExtra("docRef", reference)
-//                startActivity(intent)
-//                finish()
-//            }.addOnFailureListener { e ->
-//                Log.w("Email", "Error updating document", e)
-//                Toast.makeText(this, "Internal Server Error", Toast.LENGTH_SHORT).show()
-//            }
-            val intent = Intent(this, HouserulesActivity::class.java)
-            intent.putExtra("docRef", intent.getStringExtra("docRef"))
-            startActivity(intent)
-            finish()
+            db.collection("users").document(user?.uid.toString()).update("email", email.text.toString()).addOnSuccessListener {
+                Toast.makeText(this, "Email updated successfully", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, HouserulesActivity::class.java)
+                startActivity(intent)
+                finish()
+            }.addOnFailureListener { e ->
+                Log.w("Email", "Error updating document", e)
+                Toast.makeText(this, "Internal Server Error", Toast.LENGTH_SHORT).show()
+            }
+//            val intent = Intent(this, HouserulesActivity::class.java)
+//            startActivity(intent)
+//            finish()
         }
     }
     companion object {

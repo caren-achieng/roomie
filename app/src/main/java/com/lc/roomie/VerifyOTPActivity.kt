@@ -194,13 +194,13 @@ class VerifyOTPActivity : AppCompatActivity() {
 
         VerifyButton.setOnClickListener(){
             //Comment this out
-//            progressBar2.visibility = View.VISIBLE
-//            buttonVerify.visibility = View.GONE
-//            val code : String = inputCode1.getText().toString() + inputCode2.getText().toString() + inputCode3.getText().toString() + inputCode4.getText().toString() + inputCode5.getText().toString() + inputCode6.getText().toString()
-//            verifyPhoneNumberWithCode(storedVerificationId, code)
-            val intent = Intent(this, VerifyEmailActivity::class.java)
-            startActivity(intent)
-            finish()
+            progressBar2.visibility = View.VISIBLE
+            buttonVerify.visibility = View.GONE
+            val code : String = inputCode1.getText().toString() + inputCode2.getText().toString() + inputCode3.getText().toString() + inputCode4.getText().toString() + inputCode5.getText().toString() + inputCode6.getText().toString()
+            verifyPhoneNumberWithCode(storedVerificationId, code)
+//            val intent = Intent(this, VerifyEmailActivity::class.java)
+//            startActivity(intent)
+//            finish()
         }
 
         resendOTP.setOnClickListener(){
@@ -285,14 +285,14 @@ class VerifyOTPActivity : AppCompatActivity() {
                     val db = Firebase.firestore
                     var reference: String? = null
                     db.collection("users")
-                        .add(data)
-                        .addOnSuccessListener { documentReference ->
-                            reference = documentReference.id
-                            Log.d("TAG", "DocumentSnapshot added with ID: ${documentReference.id}")
+                        .document(auth.currentUser?.uid.toString())
+                        .set(data)
+                        .addOnSuccessListener {
+                            reference = auth.currentUser?.uid.toString()
+                            Log.d("TAG", "DocumentSnapshot added with ID: ${reference}")
                             Log.d(TAG, "signInWithCredential:success")
                             Toast.makeText(this, "Login Successful $phone", Toast.LENGTH_SHORT).show()
                             val intent = Intent(this, VerifyEmailActivity::class.java)
-                            intent.putExtra("docRef", reference.toString())
                             startActivity(intent)
                             finish()
                         }

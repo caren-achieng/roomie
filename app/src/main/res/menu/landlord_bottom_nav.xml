@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Home"
+        android:id="@+id/home"
+        android:icon="@drawable/ic_outline_home_24"
+        android:enabled="true"/>
+    <item android:title="Inbox"
+        android:id="@+id/inbox"
+        android:icon="@drawable/ic_outline_mode_comment_24"
+        android:enabled="true"/>
+    <item android:title="Menu"
+        android:id="@+id/menu"
+        android:icon="@drawable/ic_baseline_menu_24"
+        android:enabled="true"/>
+</menu>

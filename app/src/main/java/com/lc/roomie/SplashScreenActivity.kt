@@ -25,7 +25,7 @@ class SplashScreenActivity : AppCompatActivity() {
         val loginIntent = Intent(this@SplashScreenActivity, LoginActivity::class.java)
 
         //CHANGE TO PAGE YOU WANT TO MAKE
-        val developIntent = Intent(this@SplashScreenActivity, PersonalityActivity::class.java)
+        val developIntent = Intent(this@SplashScreenActivity, LandlordMainActivity::class.java)
 
         val user = Firebase.auth.currentUser
 

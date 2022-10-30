@@ -2,13 +2,16 @@ package com.lc.roomie
 
 
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View.generateViewId
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.graphics.toColor
 import com.google.android.material.chip.Chip
+import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_personality.*
@@ -38,6 +41,8 @@ class PersonalityActivity : AppCompatActivity() {
         "Extrovert"
     )
 
+    val user = Firebase.auth.currentUser
+
     override fun onCreate(savedInstanceState: Bundle?) {
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         super.onCreate(savedInstanceState)
@@ -56,9 +61,13 @@ class PersonalityActivity : AppCompatActivity() {
         }
 
         continueButton.setOnClickListener{
-//            db.collection("users").document("${intent.getStringExtra("docRef")}").update("traits", getTraits()).addOnSuccessListener {
-//
-//            }
+            db.collection("users").document(user?.uid.toString()).update("traits", getTraits()).addOnSuccessListener {
+                Toast.makeText(this, "Done", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, LandlordMainActivity::class.java)
+                startActivity(intent)
+            }
+//            val intent = Intent(this, LandlordMainActivity::class.java)
+//            startActivity(intent)
 
         }
 

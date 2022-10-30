@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/gradient_animation"
+    android:id="@+id/root_layout"
+    tools:context=".AddListingActivity"
+    >
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:background="@color/transparent"
+        android:fitsSystemWindows="false"
+        >
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            android:background="@color/transparent"
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+            android:id="@+id/collapsing_toolbar"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="What type of place are you listing?"
+                android:background="@color/transparent"
+                android:textColor="?attr/colorOnPrimary"
+                android:textSize="25sp"
+                android:layout_gravity="bottom"
+                android:layout_margin="20dp"
+                android:textStyle="bold"
+                />
+
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+
+    <FrameLayout
+        android:id="@+id/navButtons"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_gravity="bottom"
+        android:translationZ="1dp"
+        android:elevation="10dp"
+        >
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:translationZ="1dp"
+            app:trackColor="@color/transparent"
+            app:indicatorColor="?attr/textAppearanceBody1"
+            android:progress="25"
+            android:outlineProvider="none"
+            />
+
+<!--        <RelativeLayout-->
+<!--            android:id="@+id/nav_buttons"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="80dp"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:paddingEnd="10dp"-->
+<!--            android:paddingStart="10dp"-->
+<!--            >-->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_vertical"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                >
+
+
+            <Button
+                android:id="@+id/backButton"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:textColor="?attr/textAppearanceBody1"
+                android:layout_gravity="start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Back" />
+
+                <Button
+
+                    android:id="@+id/nextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:text="Next" />
+            </FrameLayout>
+
+<!--        </RelativeLayout>-->
+    </FrameLayout>
+
+
+
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

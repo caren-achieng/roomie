@@ -27,6 +27,7 @@ import androidx.core.content.ContextCompat
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.ktx.storage
@@ -41,6 +42,7 @@ class CompleteProfileActivity : AppCompatActivity() {
 
     var pickedPhoto : Uri? = null
     var pickedBitMap : Bitmap? = null
+    val user = Firebase.auth.currentUser
 
     fun pickPhoto(view: View){
         if(ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
@@ -171,42 +173,39 @@ class CompleteProfileActivity : AppCompatActivity() {
         }
 
         continueProfile.setOnClickListener{
-//            if(first_name.text.toString() == ""){
-//                first_name.error = "First name is required"
-//                first_name.requestFocus()
-//                return@setOnClickListener
-//            }
-//            if(last_name.text.toString() == ""){
-//                last_name.error = "First name is required"
-//                last_name.requestFocus()
-//                return@setOnClickListener
-//            }
-//            if(radioGenders.checkedRadioButtonId == -1){
-//                Toast.makeText(this, "Choose your gender", Toast.LENGTH_SHORT).show()
-//                return@setOnClickListener
-//            }
-//
-//            val data = hashMapOf<String, String>(
-//                "first_name" to first_name.text.toString(),
-//                "last_name" to last_name.text.toString(),
-//                "birthday" to birthday.dayOfMonth.toString()+"/"+birthday.month.toString() +"/"+birthday.year.toString(),
-//                "gender" to findViewById<RadioButton>(radioGenders.checkedRadioButtonId).text.toString()
-//                )
-//
-//            db.collection("users").document("${intent.getStringExtra("docRef")}").update(data as Map<String, Any>).addOnSuccessListener {
-//                Toast.makeText(this, "Profile updated successfully", Toast.LENGTH_SHORT).show()
-//                val reference = intent.getStringExtra("docRef")
-//                val intent = Intent(this, PersonalityActivity::class.java)
-//                intent.putExtra("docRef", reference)
-//                startActivity(intent)
-//            }.addOnFailureListener {
-//                Toast.makeText(this, "Profile update failed", Toast.LENGTH_SHORT).show()
-//                Log.d("TAG", "onCreate: ${it.message}")
-//
-//            }
-            val intent = Intent(this, PersonalityActivity::class.java)
-            intent.putExtra("docRef", intent.getStringExtra("docRef"))
-            startActivity(intent)
+            if(first_name.text.toString() == ""){
+                first_name.error = "First name is required"
+                first_name.requestFocus()
+                return@setOnClickListener
+            }
+            if(last_name.text.toString() == ""){
+                last_name.error = "First name is required"
+                last_name.requestFocus()
+                return@setOnClickListener
+            }
+            if(radioGenders.checkedRadioButtonId == -1){
+                Toast.makeText(this, "Choose your gender", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
+            val data = hashMapOf<String, String>(
+                "first_name" to first_name.text.toString(),
+                "last_name" to last_name.text.toString(),
+                "birthday" to birthday.dayOfMonth.toString()+"/"+birthday.month.toString() +"/"+birthday.year.toString(),
+                "gender" to findViewById<RadioButton>(radioGenders.checkedRadioButtonId).text.toString()
+                )
+
+            db.collection("users").document(user?.uid.toString()).update(data as Map<String, Any>).addOnSuccessListener {
+                Toast.makeText(this, "Profile updated successfully", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, PersonalityActivity::class.java)
+                startActivity(intent)
+            }.addOnFailureListener {
+                Toast.makeText(this, "Profile update failed", Toast.LENGTH_SHORT).show()
+                Log.d("TAG", "onCreate: ${it.message}")
+
+            }
+//            val intent = Intent(this, PersonalityActivity::class.java)
+//            startActivity(intent)
 
         }
 
